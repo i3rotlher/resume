@@ -1,9 +1,11 @@
+import RightSection from "../components/sections/RightSection";
+
 const Skills = () => {
   return (
-    <div>
+    <RightSection>
       <h1>Skills</h1>
       <p>This is the skills content.</p>
-    </div>
+    </RightSection>
   );
 };
 
