@@ -29,3 +29,14 @@
   background-size: cover;
   background-position: center;
 }
+
+.mainLayout {
+  display: grid;
+  height: calc(100vh - 30px);
+  grid-template-columns: 580fr 1220fr;
+  grid-gap: 15px;
+}
+
+body {
+  margin: 15px;
+}
