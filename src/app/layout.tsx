@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-page-custom-font */
+// import "bootstrap/dist/css/bootstrap.css";
 import "./globals.css";
 import type { Metadata } from "next";
 import { VT323 } from "next/font/google";
-import RightSection from "./components/sections/RightSection";
 import LeftSection from "./components/sections/LeftSection";
 
 export const metadata: Metadata = {
@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={vt323.className}>
-      <body className={"stoneBackground"}>
+    <html lang="en">
+      <body className={`stoneBackground ${vt323.className}`}>
         <div className={"mainLayout"}>
           <LeftSection />
           {children}
