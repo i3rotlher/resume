@@ -1,0 +1,79 @@
+"use client";
+import React from "react";
+import "./Section.css";
+import "./RightSection.css";
+import Image from "next/image";
+import { useState } from "react";
+import Overview from "../tabs/overview/overview";
+import Skills from "../tabs/skills/skills";
+import QuestLog from "../tabs/questlog/questlog";
+
+const RightSection = () => {
+  const [currentTabIdx, setcurrentTabIdx] = useState(0);
+
+  const link_list = [
+    { idx: 0, link: "/overview", name: "Overview" },
+    { idx: 1, link: "/skills", name: "Skills" },
+    { idx: 2, link: "/questlog", name: "Quest Log" },
+  ];
+
+  const next = link_list[(currentTabIdx + 1) % link_list.length];
+  const prev =
+    link_list[(currentTabIdx - 1 + link_list.length) % link_list.length];
+
+  function nextTab() {
+    setcurrentTabIdx(next.idx);
+  }
+
+  function prevTab() {
+    setcurrentTabIdx(prev.idx);
+  }
+
+  return (
+    <section className="section container">
+      <div className="corners">
+        <div className="corner top-left">
+          <Image src="/corner.svg" alt="" layout="fill" />
+        </div>
+        <div className="corner top-right">
+          <Image src="/corner.svg" alt="" layout="fill" />
+        </div>
+        <div className="corner bottom-left">
+          <Image src="/corner.svg" alt="" layout="fill" />
+        </div>
+        <div className="corner bottom-right">
+          <Image src="/corner.svg" alt="" layout="fill" />
+        </div>
+      </div>
+      <div>
+        {currentTabIdx === 0 && <Overview></Overview>}
+        {currentTabIdx === 1 && <Skills></Skills>}
+        {currentTabIdx === 2 && <QuestLog></QuestLog>}
+      </div>
+      <nav>
+        <Image
+          onClick={prevTab}
+          src="/navigationArrow.svg"
+          alt={prev.name}
+          layout="fit"
+          className="navigationArrow leftCenter"
+          width={45}
+          height={45}
+        ></Image>
+        <br />
+        <Image
+          onClick={nextTab}
+          src="/navigationArrow.svg"
+          alt={next.name}
+          layout="fit"
+          className="navigationArrow rightCenter"
+          width={45}
+          height={45}
+        ></Image>
+        <br />
+      </nav>
+    </section>
+  );
+};
+
+export default RightSection;

@@ -1,9 +1,8 @@
-/* eslint-disable @next/next/no-page-custom-font */
 import "./globals.css";
 import type { Metadata } from "next";
 import { VT323 } from "next/font/google";
-import RightSection from "./components/sections/RightSection";
 import LeftSection from "./components/sections/LeftSection";
+import RightSection from "./components/sections/RightSection";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,12 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={vt323.className}>
-      <body className={"stoneBackground"}>
-        <div className={"mainLayout"}>
+    <html lang="en">
+      <body className={`stoneBackground ${vt323.className}`}>
+        <main className={"mainLayout"}>
           <LeftSection />
-          {children}
-        </div>
+          <RightSection />
+        </main>
       </body>
     </html>
   );

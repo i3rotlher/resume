@@ -32,11 +32,13 @@
 
 .mainLayout {
   display: grid;
-  height: calc(100vh - 30px);
+  /*this is related to the margin of the body*/
+  height: calc(100vh - 2 * calc(min(5vw, 5vh)));
   grid-template-columns: 580fr 1220fr;
-  grid-gap: 15px;
+  /*this should be the same as the margin of the body*/
+  grid-gap: calc(min(5vw, 5vh));
 }
 
 body {
-  margin: 15px;
+  margin: calc(min(5vw, 5vh));
 }
