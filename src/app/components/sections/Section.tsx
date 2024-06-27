@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
+import style from "../../styles/sections/Section.module.css";
 
 type SectionProps = {
   children: ReactNode;
@@ -7,18 +8,18 @@ type SectionProps = {
 
 const Section: React.FC<SectionProps> = ({ children }) => {
   return (
-    <section className="section container">
-      <div className="corners">
-        <div className="corner top-left">
+    <section className={style.section}>
+      <div className={style.corners}>
+        <div className={style["top-left"]}>
           <Image src="/corner.svg" alt="" layout="fill" />
         </div>
-        <div className="corner top-right">
+        <div className={style["top-right"]}>
           <Image src="/corner.svg" alt="" layout="fill" />
         </div>
-        <div className="corner bottom-left">
+        <div className={style["bottom-left"]}>
           <Image src="/corner.svg" alt="" layout="fill" />
         </div>
-        <div className="corner bottom-right">
+        <div className={style["bottom-right"]}>
           <Image src="/corner.svg" alt="" layout="fill" />
         </div>
       </div>

@@ -1,15 +1,18 @@
 import React from "react";
-import "./Section.css";
-import "./LeftSection.css";
+import styles from "../../styles/sections/LeftSection.module.css";
 import Section from "./Section";
 
 const LeftSection = () => {
-  return (
-    <Section>
-      <h2 className="strokedWhiteText">Left Section</h2>
-      <p>This section does not change.</p>
-    </Section>
-  );
+  function name() {
+    return (
+      <div className={styles.nameRow}>
+        <h1>Name:</h1>
+        <h1 className={styles.field + " strokedWhiteTextHighContrast"}>Max</h1>
+      </div>
+    );
+  }
+
+  return <Section>{name()}</Section>;
 };
 
 export default LeftSection;

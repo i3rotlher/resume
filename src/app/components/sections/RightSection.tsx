@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
-import "./Section.css";
-import "./RightSection.css";
 import Image from "next/image";
 import { useState } from "react";
 import Overview from "../tabs/overview/overview";
 import Skills from "../tabs/skills/skills";
 import QuestLog from "../tabs/questlog/questlog";
 import Section from "./Section";
+import style from "../../styles/sections/RightSection.module.css";
 
 const RightSection = () => {
   const [currentTabIdx, setcurrentTabIdx] = useState(0);
@@ -43,7 +42,7 @@ const RightSection = () => {
           src="/navigationArrow.svg"
           alt={prev.name}
           layout="fit"
-          className="navigationArrow leftCenter"
+          className={`${style.navigationArrow} ${style.leftCenter}`}
           width={45}
           height={45}
         ></Image>
@@ -53,7 +52,7 @@ const RightSection = () => {
           src="/navigationArrow.svg"
           alt={next.name}
           layout="fit"
-          className="navigationArrow rightCenter"
+          className={`${style.navigationArrow} ${style.rightCenter}`}
           width={45}
           height={45}
         ></Image>
