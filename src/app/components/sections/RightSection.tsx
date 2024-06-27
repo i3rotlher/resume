@@ -7,6 +7,7 @@ import { useState } from "react";
 import Overview from "../tabs/overview/overview";
 import Skills from "../tabs/skills/skills";
 import QuestLog from "../tabs/questlog/questlog";
+import Section from "./Section";
 
 const RightSection = () => {
   const [currentTabIdx, setcurrentTabIdx] = useState(0);
@@ -30,21 +31,7 @@ const RightSection = () => {
   }
 
   return (
-    <section className="section container">
-      <div className="corners">
-        <div className="corner top-left">
-          <Image src="/corner.svg" alt="" layout="fill" />
-        </div>
-        <div className="corner top-right">
-          <Image src="/corner.svg" alt="" layout="fill" />
-        </div>
-        <div className="corner bottom-left">
-          <Image src="/corner.svg" alt="" layout="fill" />
-        </div>
-        <div className="corner bottom-right">
-          <Image src="/corner.svg" alt="" layout="fill" />
-        </div>
-      </div>
+    <Section>
       <div>
         {currentTabIdx === 0 && <Overview></Overview>}
         {currentTabIdx === 1 && <Skills></Skills>}
@@ -72,7 +59,7 @@ const RightSection = () => {
         ></Image>
         <br />
       </nav>
-    </section>
+    </Section>
   );
 };
 
