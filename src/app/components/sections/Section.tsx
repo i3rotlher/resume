@@ -11,16 +11,40 @@ const Section: React.FC<SectionProps> = ({ children }) => {
     <div className={style.section}>
       <div className={style.corners}>
         <div className={style["top-left"]}>
-          <Image src="/corner.svg" alt="" layout="fill" />
+          <Image
+            src="/corner.svg"
+            alt=""
+            layout="responsive"
+            width={45}
+            height={45}
+          />
         </div>
         <div className={style["top-right"]}>
-          <Image src="/corner.svg" alt="" layout="fill" />
+          <Image
+            src="/corner.svg"
+            alt=""
+            layout="responsive"
+            width={45}
+            height={45}
+          />
         </div>
         <div className={style["bottom-left"]}>
-          <Image src="/corner.svg" alt="" layout="fill" />
+          <Image
+            src="/corner.svg"
+            alt=""
+            layout="responsive"
+            width={45}
+            height={45}
+          />
         </div>
         <div className={style["bottom-right"]}>
-          <Image src="/corner.svg" alt="" layout="fill" />
+          <Image
+            src="/corner.svg"
+            alt=""
+            layout="responsive"
+            width={45}
+            height={45}
+          />
         </div>
       </div>
       <section className={style.content}>{children}</section>

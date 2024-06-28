@@ -36,7 +36,6 @@ const RightSection = () => {
           onClick={prevTab}
           src="/navigationArrow.svg"
           alt={prev.name}
-          layout="fit"
           className={`${style.navigationArrow} ${style.leftCenter}`}
           width={45}
           height={45}
@@ -46,7 +45,6 @@ const RightSection = () => {
           onClick={nextTab}
           src="/navigationArrow.svg"
           alt={next.name}
-          layout="fit"
           className={`${style.navigationArrow} ${style.rightCenter}`}
           width={45}
           height={45}

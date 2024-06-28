@@ -15,7 +15,7 @@ const LeftSection = () => {
 
   function levelRow() {
     return (
-      <div>
+      <div className={styles.levelRow}>
         <h2>Level:</h2>
         <h2>here is going to the Progressbar</h2>
       </div>
@@ -51,12 +51,15 @@ const LeftSection = () => {
         {levelRow()}
         {classRow()}
         {nationRow()}
-        <Image
-          src="/uglyFace.png"
-          alt="Handsome Boy"
-          fit={true}
-          placeholder="blur"
-        />
+        <div className={styles.uglyFaceContainer}>
+          <Image
+            src="/uglyFace.png"
+            alt="Handsome Boy"
+            fill={true}
+            style={{ objectFit: "contain" }}
+            layout="resposive"
+          />
+        </div>
       </div>
     </Section>
   );
