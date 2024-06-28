@@ -8,7 +8,7 @@ type SectionProps = {
 
 const Section: React.FC<SectionProps> = ({ children }) => {
   return (
-    <section className={style.section}>
+    <div className={style.section}>
       <div className={style.corners}>
         <div className={style["top-left"]}>
           <Image src="/corner.svg" alt="" layout="fill" />
@@ -23,8 +23,8 @@ const Section: React.FC<SectionProps> = ({ children }) => {
           <Image src="/corner.svg" alt="" layout="fill" />
         </div>
       </div>
-      {children}
-    </section>
+      <section className={style.content}>{children}</section>
+    </div>
   );
 };
 

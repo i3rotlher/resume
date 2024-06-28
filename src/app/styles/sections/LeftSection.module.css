@@ -1,3 +1,10 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
 .nameRow {
   /* Auto layout */
   display: flex;
@@ -6,6 +13,7 @@
   align-items: center;
   padding: 0px;
   gap: 40px;
+  width: 100%;
 }
 
 .nameTitle {
@@ -18,7 +26,6 @@
   box-shadow: 0px 7px 0px #e3dac1;
   margin-bottom: 7px;
   border-radius: 5px 5px 0px 0px;
-
   justify-content: center;
   flex: 3;
 }

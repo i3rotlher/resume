@@ -31,11 +31,6 @@ const RightSection = () => {
 
   return (
     <Section>
-      <div>
-        {currentTabIdx === 0 && <Overview></Overview>}
-        {currentTabIdx === 1 && <Skills></Skills>}
-        {currentTabIdx === 2 && <QuestLog></QuestLog>}
-      </div>
       <nav>
         <Image
           onClick={prevTab}
@@ -58,6 +53,11 @@ const RightSection = () => {
         ></Image>
         <br />
       </nav>
+      <div className={style.content}>
+        {currentTabIdx === 0 && <Overview></Overview>}
+        {currentTabIdx === 1 && <Skills></Skills>}
+        {currentTabIdx === 2 && <QuestLog></QuestLog>}
+      </div>
     </Section>
   );
 };
