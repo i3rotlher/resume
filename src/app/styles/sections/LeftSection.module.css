@@ -5,29 +5,17 @@
   height: 100%;
 }
 
-.nameRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px;
-  gap: 40px;
-  width: 100%;
-  flex: 1;
-}
-
 .levelRow {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px;
-  gap: 40px;
-  width: 100%;
-  flex: 2;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
-.nameTitle {
+.levelTitle {
+  color: #000000;
+}
+
+.title {
   color: #000000;
   flex: 1;
 }
@@ -38,12 +26,30 @@
   margin-bottom: 7px;
   border-radius: 5px 5px 0px 0px;
   justify-content: center;
-  flex: 3;
+  height: fit-content;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.row > :first-child {
+  flex: 1;
+}
+
+.row > :nth-child(2) {
+  flex: 2;
+}
+
+.fieldsContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 .uglyFaceContainer {
+  flex: 2;
   position: relative;
-  height: 100%;
-  margin-inline: 20px;
-  flex: 7;
 }

@@ -59,6 +59,8 @@ h2 {
   line-height: 20px;
   display: flex;
   align-items: center;
+  text-align: center;
+
   margin: 0px;
 }
 
