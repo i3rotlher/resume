@@ -46,15 +46,7 @@ const LeftSection = () => {
   }
 
   function uglyFace() {
-    return (
-      <Image
-        src="/uglyFace.png"
-        alt="Handsome Boy"
-        fill={true}
-        style={{ objectFit: "contain" }}
-        layout="resposive"
-      />
-    );
+    return <div className={styles.uglyFace}></div>;
   }
 
   function daysSinceLastDec23(): number {
@@ -86,7 +78,10 @@ const LeftSection = () => {
           {classRow()}
           {nationRow()}
         </div>
-        <div className={styles.uglyFaceContainer}>{uglyFace()}</div>
+        <div className={styles.uglyFaceContainer}>
+          <Image src="/frame_vertical.png" alt="" fill />
+          {uglyFace()}
+        </div>
       </div>
     </Section>
   );

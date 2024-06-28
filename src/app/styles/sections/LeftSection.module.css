@@ -49,7 +49,22 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
 .uglyFaceContainer {
-  flex: 2;
+  flex: 2 1;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uglyFace {
+  position: relative;
+  width: 85%;
+  height: 80%;
+  background: url("../../../../public/uglyFace.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
 }

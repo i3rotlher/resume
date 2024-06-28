@@ -17,7 +17,7 @@
 }
 
 .strokedWhiteTextHighContrast {
-  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.85);
+  -webkit-text-stroke: 2px rgb(94 90 71);
   color: white;
   paint-order: stroke fill;
 }
@@ -32,7 +32,7 @@
   display: grid;
   /*this is related to the margin of the body*/
   height: calc(100vh - 2 * calc(min(5vw, 5vh)));
-  grid-template-columns: 580fr 1220fr;
+  grid-template-columns: 380fr 1220fr;
   /*this should be the same as the margin of the body*/
   grid-gap: calc(min(5vw, 5vh));
 }
@@ -45,7 +45,7 @@ h1 {
   font-style: normal;
   font-size: 32px;
   line-height: 32px;
-  font-weight: 400;
+  font-weight: 300;
   display: flex;
   align-items: center;
   text-align: center;
@@ -54,7 +54,7 @@ h1 {
 
 h2 {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 20px;
   line-height: 20px;
   display: flex;
