@@ -1,6 +1,5 @@
 "use client";
 import React, { ReactNode, useRef, useState } from "react";
-import Image from "next/image";
 
 import style from "./../../../app/styles/util/HoverInfo.module.css";
 import { HoverBox } from "./HoverBox";
@@ -10,6 +9,11 @@ type HoverInfoprops = {
   hoverText: string[];
 };
 
+/**
+ * A component that makes the child hoverable with a info box.
+ * @param hoverText The text to be diplayed. Each element in the array represents an individual line,
+ *  which will be sperated by a <br> break element
+ */
 export const HoverInfo: React.FC<HoverInfoprops> = ({
   children,
   hoverText,
