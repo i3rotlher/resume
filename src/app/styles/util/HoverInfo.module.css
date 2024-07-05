@@ -14,7 +14,7 @@
 
 .hoverInfoBox {
   position: absolute;
-  /* display: none; */
+  display: none;
   z-index: 99;
   background: #c3ae72;
   border: 5px solid #bc894d;
