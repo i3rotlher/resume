@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import "./Section.css";
-import "./RightSection.css";
 import Image from "next/image";
 import { useState } from "react";
 import Overview from "../tabs/overview/overview";
 import Skills from "../tabs/skills/skills";
 import QuestLog from "../tabs/questlog/questlog";
+import Section from "./Section";
+import style from "../../styles/sections/RightSection.module.css";
 
 const RightSection = () => {
   const [currentTabIdx, setcurrentTabIdx] = useState(0);
@@ -30,33 +30,13 @@ const RightSection = () => {
   }
 
   return (
-    <section className="section container">
-      <div className="corners">
-        <div className="corner top-left">
-          <Image src="/corner.svg" alt="" layout="fill" />
-        </div>
-        <div className="corner top-right">
-          <Image src="/corner.svg" alt="" layout="fill" />
-        </div>
-        <div className="corner bottom-left">
-          <Image src="/corner.svg" alt="" layout="fill" />
-        </div>
-        <div className="corner bottom-right">
-          <Image src="/corner.svg" alt="" layout="fill" />
-        </div>
-      </div>
-      <div>
-        {currentTabIdx === 0 && <Overview></Overview>}
-        {currentTabIdx === 1 && <Skills></Skills>}
-        {currentTabIdx === 2 && <QuestLog></QuestLog>}
-      </div>
+    <Section>
       <nav>
         <Image
           onClick={prevTab}
           src="/navigationArrow.svg"
           alt={prev.name}
-          layout="fit"
-          className="navigationArrow leftCenter"
+          className={`${style.navigationArrow} ${style.leftCenter}`}
           width={45}
           height={45}
         ></Image>
@@ -65,14 +45,18 @@ const RightSection = () => {
           onClick={nextTab}
           src="/navigationArrow.svg"
           alt={next.name}
-          layout="fit"
-          className="navigationArrow rightCenter"
+          className={`${style.navigationArrow} ${style.rightCenter}`}
           width={45}
           height={45}
         ></Image>
         <br />
       </nav>
-    </section>
+      <div className={style.content}>
+        {currentTabIdx === 0 && <Overview></Overview>}
+        {currentTabIdx === 1 && <Skills></Skills>}
+        {currentTabIdx === 2 && <QuestLog></QuestLog>}
+      </div>
+    </Section>
   );
 };
 

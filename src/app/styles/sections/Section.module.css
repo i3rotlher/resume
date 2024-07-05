@@ -1,0 +1,44 @@
+.section {
+  position: relative;
+  background-color: var(--background);
+  padding: 20px;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.corners div {
+  position: absolute;
+  display: flex;
+  width: 2vw;
+  height: 2vw;
+}
+
+.top-left {
+  top: calc(2vw * -0.18);
+  left: calc(2vw * -0.18);
+}
+
+.top-right {
+  top: calc(2vw * -0.18);
+  right: calc(2vw * -0.18);
+  transform: scaleX(-1); /* Flip horizontally */
+}
+
+.bottom-left {
+  bottom: calc(2vw * -0.18);
+  left: calc(2vw * -0.18);
+  transform: scaleY(-1); /* Flip vertically */
+}
+
+.bottom-right {
+  bottom: calc(2vw * -0.18);
+  right: calc(2vw * -0.18);
+  transform: rotate(180deg); /* Rotate 180 degrees */
+}
+
+.section nav {
+  height: 0px;
+}
+
+.content {
+  height: 100%;
+}

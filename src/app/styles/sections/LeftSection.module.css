@@ -1,0 +1,70 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.levelRow {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.levelTitle {
+  color: #000000;
+}
+
+.title {
+  color: #000000;
+  flex: 1;
+}
+
+.field {
+  background: #6f6b53;
+  box-shadow: 0px 4px 0px #e3dac1;
+  margin-bottom: 7px;
+  border-radius: 5px 5px 0px 0px;
+  justify-content: center;
+  height: fit-content;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.row > :first-child {
+  flex: 1;
+}
+
+.row > :nth-child(2) {
+  flex: 2;
+}
+
+.fieldsContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.uglyFaceContainer {
+  flex: 2 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uglyFace {
+  position: relative;
+  width: 85%;
+  height: 80%;
+  background: url("../../../../public/uglyFace.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
