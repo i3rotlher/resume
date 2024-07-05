@@ -32,12 +32,15 @@ export const HoverInfo: React.FC<HoverInfoprops> = ({
 
   return (
     <div
-      className={style.hoverInfoContainer}
+      className={style.hoverInfoElement}
       onMouseMove={(e) => setBoxCoordinates(e)}
     >
       <div
-        className={style.hoverInfoText}
-        style={{ left: coordinates.xOffset, top: coordinates.yOffset }}
+        style={{
+          left: coordinates.xOffset,
+          top: coordinates.yOffset,
+          position: "relative",
+        }}
       >
         <HoverBox textRows={hoverText} />
       </div>

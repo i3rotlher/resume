@@ -1,21 +1,30 @@
-.hoverInfoContainer {
+.hoverInfoElement {
   cursor: url("/info_cursor.svg") 5 5, auto;
-  height: 100%;
   width: 100%;
-  position: relative;
 }
 
-.hoverInfoContainer:hover .hoverInfoText {
+.hoverInfoElement:hover .hoverInfoBox {
   display: block;
 }
 
-.hoverInfoText {
+.hoverText {
+  position: relative;
+  padding: 10px;
+}
+
+.hoverInfoBox {
   position: absolute;
-  display: none;
+  /* display: none; */
   z-index: 99;
   background: #c3ae72;
   border: 5px solid #bc894d;
   border-radius: 10px;
   text-wrap: nowrap;
   transform: translateY(-20%);
+  padding: 10px;
+  text-align: center;
+}
+
+.hoverInfoText {
+  justify-content: center;
 }
