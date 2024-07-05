@@ -8,7 +8,7 @@ type ProgressBarProps = {
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ percent, label }) => {
   return (
-    <div className={style.progressbarBackground}>
+    <div className={style.progressbarBackground + " hoverInfo"}>
       <div
         className={style.progressbar}
         style={{ width: `${percent * 100}%` }}
