@@ -32,7 +32,7 @@
   display: grid;
   /*this is related to the margin of the body*/
   height: calc(100vh - 2 * calc(min(5vw, 5vh)));
-  grid-template-columns: 380fr 1220fr;
+  grid-template-columns: 2fr 5fr;
   /*this should be the same as the margin of the body*/
   grid-gap: calc(min(5vw, 5vh));
 }

@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding-inline: 10px;
+}
+
+.description {
+  flex: 5;
+  /* background-color: green; */
+}
+
+.skills {
+  flex: 4;
+  background-color: red;
+}
