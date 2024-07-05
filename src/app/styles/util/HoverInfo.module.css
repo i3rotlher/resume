@@ -1,6 +1,9 @@
 .hoverInfoElement {
   cursor: url("/info_cursor.svg") 5 5, auto;
   width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .hoverInfoElement:hover .hoverInfoBox {
@@ -23,6 +26,7 @@
   transform: translateY(-20%);
   padding: 10px;
   text-align: center;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
 }
 
 .hoverInfoText {

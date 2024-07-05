@@ -62,9 +62,5 @@
   position: relative;
   width: 85%;
   height: 80%;
-  background: url("../../../../public/uglyFace.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 10px;
 }

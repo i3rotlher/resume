@@ -59,7 +59,15 @@ const LeftSection = () => {
   }
 
   function uglyFace() {
-    return <div className={styles.uglyFace}></div>;
+    return (
+      <div className={styles.uglyFace}>
+        <HoverInfo
+          hoverText={["Look at this handsome boy!", "Yep, that's me."]}
+        >
+          <Image src="/uglyFace.png" alt="" fill />
+        </HoverInfo>
+      </div>
+    );
   }
 
   function percentageOfYearCompleted(): number {
@@ -109,8 +117,8 @@ const LeftSection = () => {
           {nationRow()}
         </div>
         <div className={styles.uglyFaceContainer}>
-          <Image src="/frame_vertical.png" alt="" fill />
           {uglyFace()}
+          <Image src="/frame_vertical.png" alt="" fill />
         </div>
       </div>
     </Section>
