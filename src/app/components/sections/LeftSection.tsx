@@ -3,6 +3,9 @@ import styles from "../../styles/sections/LeftSection.module.css";
 import Section from "./Section";
 import Image from "next/image";
 import ProgressBar from "../util/ProgressBar";
+import { HoverInfo } from "../util/HoverInfo";
+
+const birthdate = "1998-12-23";
 
 const LeftSection = () => {
   function nameRow() {
@@ -15,10 +18,20 @@ const LeftSection = () => {
   }
 
   function levelRow() {
+    const text = [
+      `Current Level: ${calculateAge()}.`,
+      `Days untill next Level:`,
+      `${daysUntilNextBirthday()}  XP`,
+    ];
     return (
       <div className={`${styles.levelRow}`}>
         <h2 className={styles.levelTitle}>Level:</h2>
-        <ProgressBar percent={daysSinceLastDec23()} label={"25"}></ProgressBar>
+        <HoverInfo hoverText={text}>
+          <ProgressBar
+            percent={percentageOfYearCompleted()}
+            label={`${calculateAge()}`}
+          ></ProgressBar>
+        </HoverInfo>
       </div>
     );
   }
@@ -46,27 +59,52 @@ const LeftSection = () => {
   }
 
   function uglyFace() {
-    return <div className={styles.uglyFace}></div>;
+    return (
+      <div className={styles.uglyFace}>
+        <HoverInfo
+          hoverText={["Look at this handsome boy!", "Yep, that's me."]}
+        >
+          <Image src="/uglyFace.png" alt="" fill />
+        </HoverInfo>
+      </div>
+    );
   }
 
-  function daysSinceLastDec23(): number {
-    const now: Date = new Date();
-    const currentYear: number = now.getFullYear();
-    let lastDec23: Date = new Date(currentYear - 1, 11, 23); // Last year's Dec 23rd
+  function percentageOfYearCompleted(): number {
+    return parseFloat(((365 - daysUntilNextBirthday()) / 365).toFixed(2));
+  }
 
-    if (now >= new Date(currentYear, 11, 23)) {
-      // If the current date is on or after this year's Dec 23rd
-      lastDec23.setFullYear(currentYear); // Use this year's Dec 23rd
+  function calculateAge() {
+    const birthDate = new Date(birthdate);
+    const currentDate = new Date();
+
+    let age = currentDate.getFullYear() - birthDate.getFullYear();
+    const monthDiff = currentDate.getMonth() - birthDate.getMonth();
+
+    if (
+      monthDiff < 0 ||
+      (monthDiff === 0 && currentDate.getDate() < birthDate.getDate())
+    ) {
+      age--;
+    }
+    return age;
+  }
+
+  function daysUntilNextBirthday() {
+    const today = new Date();
+    const birthDate = new Date(birthdate);
+
+    birthDate.setFullYear(today.getFullYear());
+
+    if (today > birthDate) {
+      birthDate.setFullYear(today.getFullYear() + 1);
     }
 
-    const nextDec23: Date = new Date(lastDec23.getFullYear() + 1, 11, 23); // Next Dec 23rd
-    const daysInYear: number =
-      (nextDec23.getTime() - lastDec23.getTime()) / (1000 * 60 * 60 * 24); // Total days between the two Dec 23rds
-    const daysCompleted: number =
-      (now.getTime() - lastDec23.getTime()) / (1000 * 60 * 60 * 24); // Days completed since last Dec 23rd
+    const diffTime = birthDate.getTime() - today.getTime();
 
-    const result: number = daysCompleted / daysInYear;
-    return parseFloat(result.toFixed(2));
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    return diffDays;
   }
 
   return (
@@ -79,8 +117,8 @@ const LeftSection = () => {
           {nationRow()}
         </div>
         <div className={styles.uglyFaceContainer}>
-          <Image src="/frame_vertical.png" alt="" fill />
           {uglyFace()}
+          <Image src="/frame_vertical.png" alt="" fill />
         </div>
       </div>
     </Section>

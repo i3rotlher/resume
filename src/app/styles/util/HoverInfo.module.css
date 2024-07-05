@@ -1,0 +1,34 @@
+.hoverInfoElement {
+  cursor: url("/info_cursor.svg") 5 5, auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hoverInfoElement:hover .hoverInfoBox {
+  display: block;
+}
+
+.hoverText {
+  position: relative;
+  padding: 10px;
+}
+
+.hoverInfoBox {
+  position: absolute;
+  display: none;
+  z-index: 99;
+  background: #c3ae72;
+  border: 5px solid #bc894d;
+  border-radius: 10px;
+  text-wrap: nowrap;
+  transform: translateY(-20%);
+  padding: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.25);
+}
+
+.hoverInfoText {
+  justify-content: center;
+}
