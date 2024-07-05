@@ -52,9 +52,14 @@ const RightSection = () => {
         <br />
       </nav>
       <div className={style.content}>
-        {currentTabIdx === 0 && <Overview></Overview>}
-        {currentTabIdx === 1 && <Skills></Skills>}
-        {currentTabIdx === 2 && <QuestLog></QuestLog>}
+        <h2 className={style.heading + " strokedWhiteTextHighContrast"}>
+          {link_list[currentTabIdx].name}
+        </h2>
+        <div className={style.content}>
+          {currentTabIdx === 0 && <Overview></Overview>}
+          {currentTabIdx === 1 && <Skills></Skills>}
+          {currentTabIdx === 2 && <QuestLog></QuestLog>}
+        </div>
       </div>
     </Section>
   );

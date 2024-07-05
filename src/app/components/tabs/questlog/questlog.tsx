@@ -1,7 +1,7 @@
 const QuestLog = () => {
   return (
     <>
-      <h1>QuestLog</h1>
+      <h2>QuestLog</h2>
       <p>This is the QuestLog content.</p>
     </>
   );

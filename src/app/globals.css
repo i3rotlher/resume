@@ -11,7 +11,7 @@
 }
 
 .strokedWhiteText {
-  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
   color: white;
   paint-order: stroke fill;
 }
@@ -43,6 +43,17 @@ body {
 
 h1 {
   font-style: normal;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+
+h2 {
+  font-style: normal;
   font-size: 32px;
   line-height: 32px;
   font-weight: 300;
@@ -52,7 +63,7 @@ h1 {
   margin: 0px;
 }
 
-h2 {
+h3 {
   font-style: normal;
   font-weight: 300;
   font-size: 20px;

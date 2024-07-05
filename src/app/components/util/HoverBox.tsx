@@ -12,7 +12,7 @@ export const HoverBox: React.FC<HoverBoxProps> = ({ textRows }) => {
         <Image src="/frame_horizontal.png" alt="" fill />
         {textRows.map((row, idx) => (
           <React.Fragment key={idx}>
-            <h2 className={style.hoverInfoText}>{row}</h2>
+            <h3 className={style.hoverInfoText}>{row}</h3>
             {idx !== textRows.length - 1 && <br />}
           </React.Fragment>
         ))}

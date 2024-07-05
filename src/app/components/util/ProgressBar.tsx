@@ -13,7 +13,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ percent, label }) => {
         className={style.progressbar}
         style={{ width: `${percent * 100}%` }}
       />
-      <h2 className={`${style.label} strokedWhiteTextHighContrast`}>{label}</h2>{" "}
+      <h3 className={`${style.label} strokedWhiteTextHighContrast`}>{label}</h3>{" "}
     </div>
   );
 };
