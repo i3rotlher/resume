@@ -11,8 +11,8 @@ const LeftSection = () => {
   function nameRow() {
     return (
       <div className={`${styles.row}`}>
-        <h1 className={styles.title}>Name:</h1>
-        <h1 className={styles.field + " strokedWhiteTextHighContrast"}>Max</h1>
+        <h2 className={styles.title}>Name:</h2>
+        <h2 className={styles.field + " strokedWhiteTextHighContrast"}>Max</h2>
       </div>
     );
   }
@@ -25,11 +25,12 @@ const LeftSection = () => {
     ];
     return (
       <div className={`${styles.levelRow}`}>
-        <h2 className={styles.levelTitle}>Level:</h2>
+        <h3 className={styles.levelTitle}>Level:</h3>
         <HoverInfo hoverText={text}>
           <ProgressBar
             percent={percentageOfYearCompleted()}
             label={`${calculateAge()}`}
+            color={"#e7d95f"}
           ></ProgressBar>
         </HoverInfo>
       </div>
@@ -39,10 +40,10 @@ const LeftSection = () => {
   function classRow() {
     return (
       <div className={`${styles.row}`}>
-        <h2 className={styles.title}>Class:</h2>
-        <h2 className={styles.field + " strokedWhiteTextHighContrast"}>
+        <h3 className={styles.title}>Class:</h3>
+        <h3 className={styles.field + " strokedWhiteTextHighContrast"}>
           Fullstack Developer
-        </h2>
+        </h3>
       </div>
     );
   }
@@ -50,10 +51,10 @@ const LeftSection = () => {
   function nationRow() {
     return (
       <div className={`${styles.row}`}>
-        <h2 className={styles.title}>Nation:</h2>
-        <h2 className={styles.field + " strokedWhiteTextHighContrast"}>
+        <h3 className={styles.title}>Nation:</h3>
+        <h3 className={styles.field + " strokedWhiteTextHighContrast"}>
           German
-        </h2>
+        </h3>
       </div>
     );
   }

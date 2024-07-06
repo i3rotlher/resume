@@ -1,7 +1,7 @@
 const Skills = () => {
   return (
     <>
-      <h1>Skills</h1>
+      <h2>Skills</h2>
       <p>This is the skills content.</p>
     </>
   );
