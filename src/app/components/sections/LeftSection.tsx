@@ -30,6 +30,7 @@ const LeftSection = () => {
           <ProgressBar
             percent={percentageOfYearCompleted()}
             label={`${calculateAge()}`}
+            color={"#e7d95f"}
           ></ProgressBar>
         </HoverInfo>
       </div>

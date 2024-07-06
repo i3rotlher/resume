@@ -11,7 +11,7 @@
 }
 
 .strokedWhiteText {
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
   color: white;
   paint-order: stroke fill;
 }

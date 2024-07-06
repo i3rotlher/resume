@@ -3,11 +3,13 @@
   height: 100%;
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .paddedText {
   padding: 30px;
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 2;
 }
 

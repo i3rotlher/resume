@@ -13,4 +13,7 @@
 .skills {
   flex: 4;
   background-color: red;
+  display: flex;
+  flex-direction: column;
+  gap: 15%;
 }
