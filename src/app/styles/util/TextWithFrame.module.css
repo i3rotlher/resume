@@ -8,9 +8,10 @@
 }
 
 .paddedText {
-  padding: 30px;
+  margin: 30px;
   overflow-y: auto;
   z-index: 2;
+  height: -webkit-fill-available;
 }
 
 .frame {
