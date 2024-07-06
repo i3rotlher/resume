@@ -2,7 +2,7 @@ import Image from "next/image";
 import style from "../../../styles/tabs/overview.module.css";
 import ProgressBar from "../../util/ProgressBar";
 import { TextWithFrame } from "../../util/TextWithFrame";
-import { url } from "inspector";
+
 const Overview = () => {
   return (
     <div className={style.content}>

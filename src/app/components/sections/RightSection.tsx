@@ -2,9 +2,9 @@
 import React from "react";
 import Image from "next/image";
 import { useState } from "react";
-import Overview from "../tabs/overview/overview";
-import Skills from "../tabs/skills/skills";
+import Skills from "../tabs/skills/Skills";
 import QuestLog from "../tabs/questlog/questlog";
+import Overview from "../tabs/overview/Overview";
 import Section from "./Section";
 import style from "../../styles/sections/RightSection.module.css";
 
@@ -51,7 +51,7 @@ const RightSection = () => {
         ></Image>
         <br />
       </nav>
-      <div className={style.content}>
+      <div className={style.layout}>
         <h2 className={style.heading + " strokedWhiteTextHighContrast"}>
           {link_list[currentTabIdx].name}
         </h2>

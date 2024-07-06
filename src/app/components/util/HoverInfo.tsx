@@ -11,8 +11,7 @@ type HoverInfoprops = {
 
 /**
  * A component that makes the child hoverable with a info box.
- * @param hoverText The text to be diplayed. Each element in the array represents an individual line,
- *  which will be sperated by a <br> break element
+ * @param hoverText The text to be diplayed. Each element in the array represents an individual line
  */
 export const HoverInfo: React.FC<HoverInfoprops> = ({
   children,

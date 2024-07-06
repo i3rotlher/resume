@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+  height: 100%;
+  gap: 15px;
+}
+
+.attribute {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding-right: 30px;
+  text-wrap: nowrap;
+  gap: 10px;
+}
+
+.logoContainer {
+  position: relative;
+  width: 90px;
+}

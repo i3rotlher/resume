@@ -20,6 +20,7 @@ const LeftSection = () => {
   function levelRow() {
     const text = [
       `Current Level: ${calculateAge()}.`,
+      ``,
       `Days untill next Level:`,
       `${daysUntilNextBirthday()}  XP`,
     ];
