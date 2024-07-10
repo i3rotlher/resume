@@ -1,8 +1,8 @@
 <svg width="783" height="40" viewBox="0 0 783 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_629_3549)">
-<path d="M782 23L782 19.9335H1V16.5" stroke="#BC894D" stroke-width="2"/>
-<path d="M782 22.5V38.25H761V23.4264H778.348V34.5441H764.652V27.1323L774.696 27.1323V30.8383H767.392" stroke="#BC894D" stroke-width="2"/>
-<path d="M1 17.25V1.5H22V16.3236H4.65217V5.20595H18.3478V12.6177L8.30434 12.6177V8.91172H15.6085" stroke="#BC894D" stroke-width="2"/>
+<path d="M760 19.5H23" stroke="#BC894D" stroke-width="2"/>
+<path d="M760 19.5H782V38.25H761V23.4264H778.348V34.5441H764.652V27.1323L774.696 27.1323V30.8383H767.392" stroke="#BC894D" stroke-width="2"/>
+<path d="M23 19.5H1V1.5H22V16.3236H4.65217V5.20595H18.3478V12.6177L8.30434 12.6177V8.91172H15.6085" stroke="#BC894D" stroke-width="2"/>
 </g>
 <defs>
 <clipPath id="clip0_629_3549">
