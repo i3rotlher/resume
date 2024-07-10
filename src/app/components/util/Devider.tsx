@@ -25,12 +25,11 @@ export const Devider = () => {
         }}
       >
         <svg
-          width="100%"
+          width="101%"
           height="100%"
           viewBox="0 0 737 38"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
         >
           <defs>
             <pattern
