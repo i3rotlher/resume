@@ -1,3 +1,4 @@
+import { Devider } from "../../util/Devider";
 import { SkillRow } from "../../util/SkillRow";
 import skills from "./SkillsData";
 
@@ -8,15 +9,40 @@ type SkillsProps = {
 const SkillLevels: React.FC<SkillsProps> = ({ type }) => {
   return (
     <>
-      {skills[type].map((skill) => (
-        <SkillRow
-          name={skill.name}
-          icon={skill.icon}
-          level={skill.level}
-          progress={skill.progress}
-          key={skill.name}
-        />
-      ))}
+      {type === "frontend" &&
+        skills[type].map(
+          (skill) =>
+            (skill.name !== "Figma" && (
+              <SkillRow
+                name={skill.name}
+                icon={skill.icon}
+                level={skill.level}
+                progress={skill.progress}
+                key={skill.name}
+              />
+            )) || (
+              <>
+                <Devider />
+                <SkillRow
+                  name={skill.name}
+                  icon={skill.icon}
+                  level={skill.level}
+                  progress={skill.progress}
+                  key={skill.name}
+                />
+              </>
+            )
+        )}
+      {type === "backend" &&
+        skills[type].map((skill) => (
+          <SkillRow
+            name={skill.name}
+            icon={skill.icon}
+            level={skill.level}
+            progress={skill.progress}
+            key={skill.name}
+          />
+        ))}
     </>
   );
 };

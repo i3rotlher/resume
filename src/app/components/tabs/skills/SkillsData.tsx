@@ -39,12 +39,6 @@ const skills: Skills = {
   ],
   frontend: [
     {
-      name: "Figma",
-      icon: "/figma.png",
-      level: 7,
-      progress: { done: 1151, total: 1542 },
-    },
-    {
       name: "Vue",
       icon: "/vue.png",
       level: 3,
@@ -61,6 +55,12 @@ const skills: Skills = {
       icon: "/react.png",
       level: 6,
       progress: { done: 423, total: 546 },
+    },
+    {
+      name: "Figma",
+      icon: "/figma.png",
+      level: 7,
+      progress: { done: 1151, total: 1542 },
     },
   ],
 };
