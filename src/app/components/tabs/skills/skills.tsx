@@ -1,9 +1,11 @@
+import SkillLevels from "./SkillLevels";
+import style from "../../../styles/tabs/Skills.module.css";
+
 const Skills = () => {
   return (
-    <>
-      <h2>Skills</h2>
-      <p>This is the skills content.</p>
-    </>
+    <div className={style.layout}>
+      <SkillLevels type="frontend" />
+    </div>
   );
 };
 
