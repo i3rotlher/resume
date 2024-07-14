@@ -1,16 +1,17 @@
 import { Devider } from "../../util/Devider";
 import { SkillRow } from "../../util/SkillRow";
 import skills from "./SkillsData";
+import style from "../../../styles/tabs/SkillLevels.module.css";
 
 type SkillsProps = {
-  type: "frontend" | "backend";
+  frontend: boolean;
 };
 
-const SkillLevels: React.FC<SkillsProps> = ({ type }) => {
+const SkillLevels: React.FC<SkillsProps> = ({ frontend }) => {
   return (
-    <>
-      {type === "frontend" &&
-        skills[type].map(
+    <div className={style.skillLevelsContainer}>
+      {(frontend &&
+        skills["frontend"].map(
           (skill) =>
             (skill.name !== "Figma" && (
               <SkillRow
@@ -32,9 +33,8 @@ const SkillLevels: React.FC<SkillsProps> = ({ type }) => {
                 />
               </>
             )
-        )}
-      {type === "backend" &&
-        skills[type].map((skill) => (
+        )) ||
+        skills["backend"].map((skill) => (
           <SkillRow
             name={skill.name}
             icon={skill.icon}
@@ -43,7 +43,7 @@ const SkillLevels: React.FC<SkillsProps> = ({ type }) => {
             key={skill.name}
           />
         ))}
-    </>
+    </div>
   );
 };
 

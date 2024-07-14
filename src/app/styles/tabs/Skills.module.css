@@ -2,8 +2,77 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
 }
 
-.layout Devider {
-  height: 50%;
+.attributes {
+  flex: 10;
+}
+
+.skillLevels {
+  flex: 20;
+}
+
+.tabsRow {
+  display: flex;
+  height: 7%;
+  width: 100%;
+}
+
+.tab {
+  width: 100%;
+  border: 3px solid var(--light-brown-accent);
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--bright-background);
+  border-radius: 0px 0px 10px 10px;
+  border-top: none;
+  position: relative;
+  top: -3px;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding: 7px;
+}
+
+.generalText {
+  border-radius: 10px;
+  border: 3px solid var(--light-brown-accent);
+  background-color: #c3ae72;
+  padding: 15px;
+  height: 33%;
+  overflow-y: scroll;
+}
+
+.tabsContainer {
+  height: 100%;
+  position: relative;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.tabsContainer * {
+  position: absolute;
+}
+
+.inactiveSideTabLeft::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -3px;
+  height: 17px;
+  width: 100%;
+  background-color: inherit;
+  border-left: inherit;
+}
+
+.inactiveSideTabRight::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: -3px;
+  height: 17px;
+  width: 100%;
+  background-color: inherit;
+  border-right: inherit;
 }
