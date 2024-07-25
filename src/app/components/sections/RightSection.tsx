@@ -2,11 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import { useState } from "react";
-import Skills from "../tabs/skills/Skills";
-import QuestLog from "../tabs/questlog/questlog";
-import Overview from "../tabs/overview/Overview";
 import Section from "./Section";
 import style from "../../styles/sections/RightSection.module.css";
+import Overview from "../tabs/overview/Overview";
+import QuestLog from "../tabs/questlog/Questlog";
+import Skills from "../tabs/skills/Skills";
 
 const RightSection = () => {
   const [currentTabIdx, setcurrentTabIdx] = useState(0);
