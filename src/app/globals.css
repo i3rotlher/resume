@@ -37,15 +37,18 @@
 
 .mainLayout {
   display: grid;
-  /*this is related to the margin of the body*/
-  height: calc(100vh - 2 * calc(min(5vw, 5vh)));
-  grid-template-columns: 26.5% 70.5%;
-  /*this should be the same as the margin of the body*/
-  grid-gap: calc(min(5vw, 5vh));
+  grid-template-columns: 25fr 75fr;
+  grid-gap: 2em;
+  box-sizing: border-box;
+  padding: 15px;
+  overflow: hidden;
+  height: 100%;
 }
 
 body {
-  margin: calc(min(5vw, 5vh));
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 h1 {
