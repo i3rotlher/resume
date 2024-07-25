@@ -37,10 +37,10 @@
 
 .mainLayout {
   display: grid;
-  grid-template-columns: 25fr 75fr;
-  grid-gap: 2em;
+  grid-template-columns: 3fr 7fr;
+  grid-gap: 3em;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 3em;
   overflow: hidden;
   height: 100%;
 }
