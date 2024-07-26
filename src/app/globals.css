@@ -37,7 +37,7 @@
 
 .mainLayout {
   display: grid;
-  grid-template-columns: 3fr 7fr;
+  /* grid-template-columns: 3fr 7fr; */
   grid-gap: 3em;
   box-sizing: border-box;
   padding: 3em;

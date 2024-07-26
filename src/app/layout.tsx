@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`stoneBackground ${vt323.className}`}>
         <main className={"mainLayout"}>
-          <LeftSection />
+          {/* <LeftSection /> */}
           <RightSection />
         </main>
       </body>
