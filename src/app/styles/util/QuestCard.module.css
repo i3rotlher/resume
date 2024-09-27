@@ -3,11 +3,19 @@
   border: 3px solid var(--light-brown-accent);
   background-color: var(--bright-background);
   border-radius: 10px;
-  height: 90px;
   padding: 15px;
   position: relative;
   z-index: 2;
   cursor: pointer;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+  transform-origin: center; /* Ensure the zoom happens from the center */
+}
+
+.container:hover {
+  transform: scale(1.02); /* Zoom in to 1.2x */
+  opacity: 0.9;
+  filter: brightness(1.02) sepia(0.2); /* Increase brightness, add yellowish tone */
 }
 
 .dotColumn {
