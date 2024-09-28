@@ -27,13 +27,15 @@ const LeftSection = () => {
     return (
       <div className={`${styles.levelRow}`}>
         <h3 className={styles.levelTitle}>Level:</h3>
-        <HoverInfo hoverText={text}>
-          <ProgressBar
-            percent={percentageOfYearCompleted()}
-            label={`${calculateAge()}`}
-            color={"#e7d95f"}
-          ></ProgressBar>
-        </HoverInfo>
+        <div style={{ width: "100%" }}>
+          <HoverInfo hoverText={text}>
+            <ProgressBar
+              percent={percentageOfYearCompleted()}
+              label={`${calculateAge()}`}
+              color={"#e7d95f"}
+            ></ProgressBar>
+          </HoverInfo>
+        </div>
       </div>
     );
   }

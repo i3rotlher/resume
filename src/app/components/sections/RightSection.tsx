@@ -6,7 +6,7 @@ import Section from "./Section";
 import style from "../../styles/sections/RightSection.module.css";
 import Overview from "../tabs/overview/Overview";
 import QuestLog from "../tabs/questlog/Questlog";
-import Skills from "../tabs/skills/skills";
+import Skills from "../tabs/skills/Skills";
 
 const RightSection = () => {
   const [currentTabIdx, setcurrentTabIdx] = useState(0);
