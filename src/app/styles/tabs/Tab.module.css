@@ -6,9 +6,10 @@
   padding-left: 15px;
   padding-right: 15px;
   box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
-  height: 100%;
   border: 3px solid var(--light-brown-accent);
   border-radius: 10px;
   z-index: 1;
   gap: 10px;
+  flex: 1 1 auto;
+  overflow: hidden;
 }
