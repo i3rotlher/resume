@@ -3,7 +3,6 @@ import style from "../../../styles/tabs/Skills.module.css";
 import { Attributes } from "./Attributes";
 import { Devider } from "../../util/Devider";
 import { useState } from "react";
-import { TextWithFrame } from "../../util/TextWithFrame";
 import { Tab } from "./Tab";
 
 export const Tabs = {
