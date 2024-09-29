@@ -83,7 +83,7 @@ const RightSection = () => {
               width="996"
               height="56"
               stroke="#BC894D"
-              stroke-width="4"
+              strokeWidth="4"
             />
             <path d="M0 39V34L15 24V54L0 44V39Z" fill="#BC894D" />
             <path d="M1028 38V33L1013 23V53L1028 43V38Z" fill="#BC894D" />
