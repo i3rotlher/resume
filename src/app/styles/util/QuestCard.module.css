@@ -1,0 +1,156 @@
+.container {
+  display: flex;
+  border: 3px solid var(--light-brown-accent);
+  background-color: var(--bright-background);
+  border-radius: 10px;
+  padding: 15px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+  transform-origin: center; /* Ensure the zoom happens from the center */
+}
+
+.container:hover {
+  transform: scale(1.02); /* Zoom in to 1.2x */
+  opacity: 0.9;
+  filter: brightness(1.02) sepia(0.2); /* Increase brightness, add yellowish tone */
+}
+
+.dotColumn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 3;
+  margin: 10px;
+}
+
+.detailsColumn {
+  display: flex;
+  flex-direction: column;
+  flex: 9;
+  justify-content: space-between;
+}
+
+.iconColumn {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 5;
+  margin: 15px;
+}
+
+.iconColumn * {
+  object-fit: contain;
+}
+
+.arrowColumn {
+  display: flex;
+  position: relative;
+  flex: 1;
+  height: 25px;
+}
+
+.arrowColumn * {
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.arrowColumn .rotated {
+  transform: rotate(90deg);
+}
+
+.timeRow {
+  display: flex;
+}
+
+.from {
+  color: white;
+}
+
+.activeQuest {
+  color: var(--orange);
+}
+
+.completedQuest {
+  color: var(--green);
+}
+
+.companyRow {
+  display: flex;
+}
+
+.company {
+  color: var(--grey);
+}
+
+.location {
+  color: white;
+}
+
+.dropDown {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--light-brown-accent);
+  background-color: var(--grey-background);
+  border-radius: 10px;
+  padding-inline: 25px;
+  padding-block: 15px;
+  gap: 1em;
+}
+
+.rotated {
+  transform: rotate(90deg);
+}
+
+.dropDownHeader {
+  display: flex;
+  text-decoration-line: underline;
+  color: white;
+  align-items: flex-start;
+}
+
+.keyResponsibilitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0px;
+}
+
+.keyResponsibilitiesList li {
+  list-style-image: url("/quests/listIndicator.svg");
+}
+
+.dropDownListItemText {
+  text-align: left;
+}
+
+.dropDownSkillsContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.dropDownSkills {
+  display: "flex";
+  flex-wrap: "wrap";
+  flex-direction: "row";
+  justify-content: "flex-start";
+  flex: 1;
+}
+
+/* --------------- Accordion ------------------ */
+
+.accordion-item {
+  position: relative;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  height: auto;
+  transform: translateY(-3px);
+}
+
+.accordion-item.collapsed {
+  height: 0;
+}

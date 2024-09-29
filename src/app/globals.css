@@ -8,19 +8,27 @@
   --bright-background: #e3dac1;
 
   --gold-accent: #e7d95f;
+
+  --scrollbar-track: #979797;
+  --scrollbar-thumb: #d9d9d9;
+
+  --scrollbar-track-text: #80724b;
+  --scrollbar-thumb-text: #968658;
+
+  --green: #4eb245;
+  --orange: #f8d146;
+  --grey: #8994ae;
 }
 
 .strokedWhiteText {
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.5);
   color: white;
-  font-weight: 400;
   paint-order: stroke fill;
 }
 
 .strokedWhiteTextHighContrast {
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.85);
+  -webkit-text-stroke: 2px rgb(94 90 71);
   color: white;
-  font-weight: 400;
   paint-order: stroke fill;
 }
 
@@ -32,11 +40,54 @@
 
 .mainLayout {
   display: grid;
-  height: calc(100vh - 30px);
-  grid-template-columns: 580fr 1220fr;
-  grid-gap: 15px;
+  /*this is related to the margin of the body*/
+  height: calc(100vh - 2 * calc(min(5vw, 5vh)));
+  grid-template-columns: 26.5% 70.5%;
+  /*this should be the same as the margin of the body*/
+  grid-gap: calc(min(5vw, 5vh));
 }
 
 body {
-  margin: 15px;
+  margin: calc(min(5vw, 5vh));
+}
+
+h1 {
+  font-style: normal;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+
+h2 {
+  font-style: normal;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  margin: 0px;
+}
+
+span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 121%;
 }

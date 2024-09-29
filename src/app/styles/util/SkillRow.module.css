@@ -1,0 +1,55 @@
+.skillRowContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  height: 100%;
+}
+
+.skillRowContainer > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.skillRowContainer > *:not(.icon) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 66%;
+}
+
+.field {
+  background-color: var(--dark-green-background);
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  box-sizing: border-box;
+  color: white;
+}
+
+.icon {
+  flex: 3;
+  position: relative;
+  object-fit: contain;
+}
+
+.icon img {
+  object-fit: contain;
+}
+
+.level {
+  text-align: center;
+  flex: 1;
+  padding-inline: 8px;
+}
+
+.name {
+  flex: 6;
+  text-align: center;
+}
+
+.progress {
+  flex: 10;
+  text-align: center;
+}
