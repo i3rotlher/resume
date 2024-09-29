@@ -22,15 +22,19 @@ const Skills = () => {
         return <SkillLevels frontend={false} />;
       case Tabs.general:
         return (
-          <div className={`${style.generalText} strokedWhiteText`}>
-            <span
-              style={{ textAlign: "justify" }}
-            >{`I'm a keen observer who never misses a detail, which helps me make
+          <div className={style.textScrollWrapper}>
+            <div
+              className={`${style.generalText} ${style["custom-scrollbar"]} strokedWhiteText`}
+            >
+              <span
+                style={{ textAlign: "justify" }}
+              >{`I'm a keen observer who never misses a detail, which helps me make
             smart decisions quickly. I'm great at keeping everyone in the loop
             with clear and friendly communication. Juggling multiple tasks at
             once is my specialty, and I pick up new skills fast. I thrive in
             team settings and love working with others to get things done. You
             can always count on me to be dependable and get the job done right.`}</span>
+            </div>
           </div>
         );
       default:

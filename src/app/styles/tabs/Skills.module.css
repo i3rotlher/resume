@@ -27,11 +27,11 @@
 }
 
 .generalText {
-  border-radius: 10px;
-  border: 3px solid var(--light-brown-accent);
-  background-color: #c3ae72;
-  padding: 15px;
-  overflow-y: scroll;
+  overflow-y: auto;
+  display: block;
+  text-align: justify;
+  height: 100%;
+  min-height: 1em;
 }
 
 .tabsContainer {
@@ -65,4 +65,27 @@
   width: 100%;
   background-color: inherit;
   border-right: inherit;
+}
+
+.textScrollWrapper {
+  border-radius: 10px;
+  border: 3px solid var(--light-brown-accent);
+  background-color: #c3ae72;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: block;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-text);
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-text);
+  border-radius: 5px;
+  width: 10%;
 }
