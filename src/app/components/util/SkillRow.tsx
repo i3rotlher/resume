@@ -1,6 +1,7 @@
 import React from "react";
 import style from "../../styles/util/SkillRow.module.css";
 import Image from "next/image";
+import { HoverInfo } from "./HoverInfo";
 
 type SkillRowProps = {
   icon: string;
@@ -20,11 +21,22 @@ export const SkillRow: React.FC<SkillRowProps> = ({
       <div className={style.icon}>
         <Image src={icon} alt={name} fill />{" "}
       </div>
-      <h1 className={`${style.level} ${style.field}`}>{level} </h1>
-      <h1 className={style.name}>{name} </h1>
-      <h1 className={`${style.progress} ${style.field}`}>
+      <HoverInfo
+        hoverText={[
+          "Skill Level",
+          "",
+          `Level ${level} out of 10.`,
+          "0 = Never used this skill",
+          "10 = Used this skill a lot",
+          "and is capable of doing anything with it.",
+        ]}
+      >
+        <span className={`${style.level} ${style.field}`}>{level} </span>
+      </HoverInfo>
+      <span className={style.name}>{name} </span>
+      <span className={`${style.progress} ${style.field}`}>
         {progress.done} / {progress.total}
-      </h1>
+      </span>
     </div>
   );
 };

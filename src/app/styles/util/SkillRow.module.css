@@ -41,6 +41,7 @@
 .level {
   text-align: center;
   flex: 1;
+  padding-inline: 8px;
 }
 
 .name {

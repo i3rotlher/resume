@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { VT323 } from "next/font/google";
 import LeftSection from "./components/sections/LeftSection";
 import RightSection from "./components/sections/RightSection";
+import Section from "./components/sections/Section";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,6 +26,8 @@ export default function RootLayout({
         <main className={"mainLayout"}>
           <LeftSection />
           <RightSection />
+          {/* <Section>Hallo</Section>
+          <Section>Hallo2</Section> */}
         </main>
       </body>
     </html>

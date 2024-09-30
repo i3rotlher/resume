@@ -1,14 +1,17 @@
 .layout {
-  height: 100%;
+  height: inherit;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 65vw;
+  padding-bottom: 15px;
 }
 
 .content {
-  height: 100%;
-  flex: 13;
+  scrollbar-width: none;
+  overflow: scroll;
+  height: inherit;
+  scroll-behavior: smooth;
+  padding-inline: 15px;
+  padding-bottom: 5px;
 }
 
 .navigationArrow {
@@ -55,11 +58,24 @@
 }
 
 .heading {
-  background-image: url("/heading_background.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
+  position: relative;
+  padding-inline: 15px;
+  padding-block: 5px;
+  margin-bottom: 15px;
+  display: flex;
   justify-content: center;
-  flex: 1;
+}
+
+.heading h2 {
+  position: relative;
+  z-index: 2;
+}
+
+.heading svg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
