@@ -7,6 +7,7 @@ import style from "../../styles/sections/RightSection.module.css";
 import Overview from "../tabs/overview/Overview";
 import QuestLog from "../tabs/questlog/Questlog";
 import Skills from "../tabs/skills/Skills";
+import Academy from "../tabs/academy/Academy";
 
 const RightSection = () => {
   const [currentTabIdx, setcurrentTabIdx] = useState(0);
@@ -15,6 +16,7 @@ const RightSection = () => {
     { idx: 0, link: "/overview", name: "Overview" },
     { idx: 1, link: "/skills", name: "Skills" },
     { idx: 2, link: "/questlog", name: "Quest Log" },
+    { idx: 3, link: "/academy", name: "Academy" },
   ];
 
   const next = link_list[(currentTabIdx + 1) % link_list.length];
@@ -93,6 +95,7 @@ const RightSection = () => {
           {currentTabIdx === 0 && <Overview></Overview>}
           {currentTabIdx === 1 && <Skills></Skills>}
           {currentTabIdx === 2 && <QuestLog></QuestLog>}
+          {currentTabIdx === 3 && <Academy></Academy>}
         </div>
       </div>
     </Section>
