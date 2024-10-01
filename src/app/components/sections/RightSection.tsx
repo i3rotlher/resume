@@ -4,9 +4,9 @@ import Image from "next/image";
 import { useState } from "react";
 import Section from "./Section";
 import style from "./../../styles/sections/RightSection.module.css";
-import Overview from "../tabs/overview/abc";
-import QuestLog from "../tabs/questlog/abc";
-import Skills from "../tabs/skills/abc";
+import Overview from "../tabs/overview/Overview";
+import QuestLog from "../tabs/questlog/Questlog";
+import Skills from "../tabs/skills/Skills";
 import Academy from "./../tabs/academy/Academy";
 
 const RightSection = () => {
