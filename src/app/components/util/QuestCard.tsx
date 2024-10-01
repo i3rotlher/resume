@@ -85,7 +85,7 @@ export const QuestCard: React.FC<QuestCardProps> = ({
           </div>
         </div>
         <div className={style.iconColumn}>
-          <Image src={`/quests/${icon}`} alt={name} fill />
+          <Image src={"/quests/" + `${icon}`} alt={name} fill />
         </div>
         <div className={style.arrowColumn}>
           <Image
