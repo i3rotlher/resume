@@ -31,6 +31,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Replace '"/' with '"/resume/' in files
+        run: |
+          find ./src/app -type f -exec sed -i 's|"/|"/resume/|g' {} +
+
+      - name: Write Next.js configuration
+        run: |
+          echo '/** @type {import("next").NextConfig} */' > next.config.mjs
+          echo 'const nextConfig = {' >> next.config.mjs
+          echo '    output: "export",' >> next.config.mjs
+          echo '    basePath: "/resume",' >> next.config.mjs
+          echo '    assetPrefix: "/resume/",' >> next.config.mjs
+          echo '};' >> next.config.mjs
+          echo '' >> next.config.mjs
+          echo 'export default nextConfig;' >> next.config.mjs
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
