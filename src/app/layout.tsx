@@ -26,8 +26,6 @@ export default function RootLayout({
         <main className={"mainLayout"}>
           <LeftSection />
           <RightSection />
-          {/* <Section>Hallo</Section>
-          <Section>Hallo2</Section> */}
         </main>
       </body>
     </html>

@@ -12,8 +12,8 @@
   --scrollbar-track: #979797;
   --scrollbar-thumb: #d9d9d9;
 
-  --scrollbar-track-text: #80724b;
-  --scrollbar-thumb-text: #968658;
+  --scrollbar-thumb-text: #80724b;
+  --scrollbar-track-text: #968658;
 
   --green: #4eb245;
   --orange: #f8d146;
@@ -88,6 +88,6 @@ h3 {
 span {
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 4.5vh;
   line-height: 121%;
 }

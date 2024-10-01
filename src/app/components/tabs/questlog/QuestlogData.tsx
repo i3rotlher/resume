@@ -8,18 +8,17 @@ export const Quests: QuestLogData = [
     to: "Present",
     name: "Hands on Projects",
     company: "By Myself",
-    city: "Seoul",
-    country: "South Korea",
+    city: "Seoul (South Korea)",
+    country: "Europe",
     icon: "ownWork.png",
     active: true,
     keyResponsibilities: [
-      "Management and further development of software for automated web application testing",
-      "Implementing new features in both the back-end and front-end",
-      "Dockerizing the project",
-      "Deploying and maintaining the software on the servers",
+      "Learning and trying out NextJS by developing a portfolio website",
+      "Learning and trying out Figma by designing a website, creating a MVP and animating it with flows",
+      "Writing a crawler for scraping data from websites with selenium and python",
     ],
     skills:
-      "JavaScript, TypeScript, Angular, HTML, MongoDB, CSS, Web-Application, Testing, CI/CD, Docker, Agile-Development, Deployment, Github-Actions".split(
+      "NextJS, TypeScript, React, HTML, JavaScript, CSS, Web-Application, Github-Actions, Python, Selenium, Figma".split(
         ", "
       ),
     sidenote: "",
