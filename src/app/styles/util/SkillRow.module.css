@@ -13,6 +13,10 @@
   height: 100%;
 }
 
+.skillRowContainer span {
+  font-size: 3.2vh;
+}
+
 .skillRowContainer > *:not(.icon) {
   display: flex;
   align-items: center;
