@@ -27,7 +27,7 @@ const Skills = () => {
               className={`${style.generalText} ${style["custom-scrollbar"]} strokedWhiteText`}
             >
               <span
-                style={{ textAlign: "justify" }}
+                className={style.text}
               >{`I'm a keen observer who never misses a detail, which helps me make
             smart decisions quickly. I'm great at keeping everyone in the loop
             with clear and friendly communication. Juggling multiple tasks at
@@ -47,10 +47,8 @@ const Skills = () => {
       <Tab tab={tab}>
         <h1 style={{ color: "var(--light-brown-accent)" }}>{tab}</h1>
         {tabUpperContent()}
+        <Devider />
 
-        <div style={{ height: "50px" }}>
-          <Devider />
-        </div>
         <div className={style.attributes}>
           <Attributes tab={tab} />
         </div>
