@@ -67,9 +67,7 @@ const LeftSection = () => {
   function uglyFace() {
     return (
       <div className={styles.uglyFace}>
-        <HoverInfo
-          hoverText={["Look at this handsome boy!", "Yep, that's me."]}
-        >
+        <HoverInfo hoverText={["That's me."]}>
           <Image src="/uglyFace.png" alt="" fill />
         </HoverInfo>
       </div>
