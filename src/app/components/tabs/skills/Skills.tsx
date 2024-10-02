@@ -47,10 +47,8 @@ const Skills = () => {
       <Tab tab={tab}>
         <h1 style={{ color: "var(--light-brown-accent)" }}>{tab}</h1>
         {tabUpperContent()}
+        <Devider />
 
-        <div style={{ height: "50px" }}>
-          <Devider />
-        </div>
         <div className={style.attributes}>
           <Attributes tab={tab} />
         </div>

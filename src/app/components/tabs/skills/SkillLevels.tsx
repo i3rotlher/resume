@@ -23,7 +23,10 @@ const SkillLevels: React.FC<SkillsProps> = ({ frontend }) => {
               />
             )) || (
               <>
-                <Devider />
+                <div style={{ height: "50px" }}>
+                  <Devider />
+                </div>
+
                 <SkillRow
                   name={skill.name}
                   icon={skill.icon}
