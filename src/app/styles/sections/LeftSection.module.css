@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
+  gap: 1%;
 }
 
 .levelRow {
@@ -22,11 +23,12 @@
 }
 
 .field {
+  padding-bottom: 4px;
   background: #6f6b53;
-  box-shadow: 0px 4px 0px #e3dac1;
-  margin-bottom: 7px;
+  box-shadow: inset 0px -4px 0px #e3dac1;
   border-radius: 5px 5px 0px 0px;
   justify-content: center;
+  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -38,6 +40,7 @@
 
 .row > :first-child {
   flex: 1;
+  justify-content: start;
 }
 
 .row > :nth-child(2) {
@@ -45,14 +48,14 @@
 }
 
 .fieldsContainer {
-  flex: 1;
+  flex: 3 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .uglyFaceContainer {
-  flex: 2 1;
+  flex: 5 1;
   position: relative;
   display: flex;
   align-items: center;
@@ -67,6 +70,7 @@
 }
 
 .buttonStyle {
+  border-radius: 10px;
   cursor: pointer;
   background-color: var(--bright-background);
   border-style: solid;
@@ -78,6 +82,10 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
-  margin-inline: 20%;
+  padding-inline: 7%;
+}
+
+.downloadCV {
+  display: flex;
+  justify-content: center;
 }
