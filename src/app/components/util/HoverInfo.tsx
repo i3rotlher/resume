@@ -47,7 +47,12 @@ export const HoverInfo: React.FC<HoverInfoprops> = ({
       >
         <HoverBox textRows={hoverText} />
       </div>
-      <div style={{ pointerEvents: "none" }}> {children}</div>
+      <div
+        style={{ pointerEvents: "none", height: "inherit", width: "inherit" }}
+      >
+        {" "}
+        {children}
+      </div>
     </div>
   );
 };

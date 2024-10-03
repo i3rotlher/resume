@@ -36,6 +36,12 @@ const skills: Skills = {
       level: 9,
       progress: { done: 636, total: 2316 },
     },
+    {
+      name: "Docker",
+      icon: "/attributes/docker.svg",
+      level: 6,
+      progress: { done: 373, total: 546 },
+    },
   ],
   frontend: [
     {

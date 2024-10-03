@@ -105,10 +105,9 @@
 }
 
 .dropDownHeader {
-  display: flex;
   text-decoration-line: underline;
   color: white;
-  align-items: flex-start;
+  justify-content: start !important;
 }
 
 .keyResponsibilitiesList {
@@ -123,6 +122,7 @@
 }
 
 .dropDownListItemText {
+  justify-content: start !important;
   text-align: left;
 }
 

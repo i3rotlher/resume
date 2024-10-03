@@ -36,6 +36,11 @@ jobs:
         run: |
           find ./src/app -type f -exec sed -i 's|"/|"/resume/|g' {} +
 
+      - name: Install tree and print /src/app directory structure
+        run: |
+          sudo apt-get update && sudo apt-get install -y tree
+          tree ./src/app
+
       - name: Write Next.js configuration
         run: |
           echo '/** @type {import("next").NextConfig} */' > next.config.mjs

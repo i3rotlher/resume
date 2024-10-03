@@ -8,7 +8,7 @@ type Attributes = {
 };
 
 const attributes: Attributes = {
-  backend: [
+  frontend: [
     {
       name: "NodeJS",
       icon: "/attributes/nodejs.svg",
@@ -38,7 +38,7 @@ const attributes: Attributes = {
       icon: "/attributes/testing.svg",
     },
   ],
-  frontend: [
+  backend: [
     {
       name: "MongoDB",
       icon: "/attributes/mongo.svg",
@@ -47,10 +47,7 @@ const attributes: Attributes = {
       name: "SQL",
       icon: "/attributes/sql.svg",
     },
-    {
-      name: "Docker",
-      icon: "/attributes/docker.svg",
-    },
+
     {
       name: "OpenAPI",
       icon: "/attributes/openapi.svg",

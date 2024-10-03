@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "../../styles/sections/LeftSection.module.css";
 import Section from "./Section";
@@ -65,9 +67,7 @@ const LeftSection = () => {
   function uglyFace() {
     return (
       <div className={styles.uglyFace}>
-        <HoverInfo
-          hoverText={["Look at this handsome boy!", "Yep, that's me."]}
-        >
+        <HoverInfo hoverText={["That's me."]}>
           <Image src="/uglyFace.png" alt="" fill />
         </HoverInfo>
       </div>
@@ -111,6 +111,10 @@ const LeftSection = () => {
     return diffDays;
   }
 
+  const showPdf = () => {
+    window.open("/CV_Max_Kuhwald.pdf", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <Section>
       <div className={styles.content}>
@@ -124,6 +128,10 @@ const LeftSection = () => {
           {uglyFace()}
           <Image src="/frame_vertical.png" alt="" fill />
         </div>
+        <h3 className={styles.buttonStyle} onClick={() => showPdf()}>
+          <Image src="/download.svg" alt="" height={20} width={20}></Image>{" "}
+          Download CV
+        </h3>
       </div>
     </Section>
   );

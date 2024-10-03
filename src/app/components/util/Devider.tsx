@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Devider = () => {
   return (
-    <div style={{ height: "100%", display: "flex" }}>
+    <div style={{ height: "5vh", display: "flex" }}>
       <div
         style={{
           position: "relative",
@@ -30,6 +30,7 @@ export const Devider = () => {
           viewBox="0 0 737 38"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
         >
           <defs>
             <pattern
@@ -40,10 +41,16 @@ export const Devider = () => {
               height="38"
               patternUnits="userSpaceOnUse"
             >
-              <path d="M0 19H737" stroke="#BC894D" strokeWidth="2" />
+              <path d="M0 19H737" stroke="#BC894D" stroke-width="2"></path>
             </pattern>
           </defs>
-          <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern)" />
+          <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            fill="url(#pattern)"
+          ></rect>
         </svg>
       </div>
       <div
