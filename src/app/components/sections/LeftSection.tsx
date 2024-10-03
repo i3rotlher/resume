@@ -47,7 +47,7 @@ const LeftSection = () => {
       <div className={`${styles.row}`}>
         <h3 className={styles.title}>Class:</h3>
         <h3 className={styles.field + " strokedWhiteTextHighContrast"}>
-          Fullstack Developer
+          Fullstack
         </h3>
       </div>
     );
@@ -128,10 +128,12 @@ const LeftSection = () => {
           {uglyFace()}
           <Image src="/frame_vertical.png" alt="" fill />
         </div>
-        <h3 className={styles.buttonStyle} onClick={() => showPdf()}>
-          <Image src="/download.svg" alt="" height={20} width={20}></Image>{" "}
-          Download CV
-        </h3>
+        <div className={styles.downloadCV}>
+          <h3 className={styles.buttonStyle} onClick={() => showPdf()}>
+            <Image src="/download.svg" alt="" height={20} width={20}></Image>{" "}
+            Download CV
+          </h3>
+        </div>
       </div>
     </Section>
   );

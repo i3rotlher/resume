@@ -89,3 +89,37 @@ span {
   font-size: 4.5vh;
   line-height: 121%;
 }
+
+.mobileConstruction {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .mainLayout {
+    grid-template-columns: auto;
+  }
+
+  .mainLayout > *:not(:last-child) {
+    display: none;
+  }
+
+  .mobileConstruction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .mobileConstruction h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .mobileConstruction p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+  }
+}
