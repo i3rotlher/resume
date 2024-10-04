@@ -26,6 +26,17 @@ export default function RootLayout({
         <main className={"mainLayout"}>
           <LeftSection />
           <RightSection />
+          <div className="mobileConstruction">
+            <Section>
+              <h1 style={{ justifyContent: "center" }}>
+                Mobile View Under Construction 🚧
+              </h1>
+              <p className="strokedWhiteText">
+                Please view this page in landscape mode or on a larger screen
+                (computer or tablet).
+              </p>
+            </Section>
+          </div>
         </main>
       </body>
     </html>
