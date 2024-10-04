@@ -8,13 +8,37 @@
 }
 
 .paddedText {
-  margin: 30px;
+  margin: 5%;
   overflow-y: auto;
   z-index: 2;
   height: -webkit-fill-available;
+  text-align: justify;
+  display: block;
+  padding-right: 15px;
 }
 
 .frame {
   position: absolute;
   z-index: 1;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: block;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-text);
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-text);
+  border-radius: 5px;
+  width: 10%;
+}
+
+.text {
+  display: inline-block;
+  padding-right: 15px;
+  text-align: justify;
 }

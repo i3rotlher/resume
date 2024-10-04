@@ -23,7 +23,7 @@ const SkillLevels: React.FC<SkillsProps> = ({ frontend }) => {
               />
             )) || (
               <>
-                <div style={{ height: "50px" }}>
+                <div style={{ height: "5vh" }}>
                   <Devider />
                 </div>
 

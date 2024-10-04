@@ -1,5 +1,5 @@
 import Image from "next/image";
-import style from "../../../styles/tabs/overview.module.css";
+import style from "../../../styles/tabs/Overview.module.css";
 import ProgressBar from "../../util/ProgressBar";
 import { TextWithFrame } from "../../util/TextWithFrame";
 
@@ -8,13 +8,7 @@ const Overview = () => {
     <div className={style.content}>
       <div className={style.description}>
         <TextWithFrame>
-          <span
-            style={{
-              textAlign: "justify",
-              lineHeight: "120%",
-              display: "block",
-            }}
-          >
+          <span className={style.text}>
             Max, the Fullstack Developer, is a true master of digital realms.
             With his ability to seamlessly blend frontend and backend
             technologies, he is akin to a powerful mage proficient in both

@@ -47,11 +47,11 @@ const Skills = () => {
       <Tab tab={tab}>
         <h1 style={{ color: "var(--light-brown-accent)" }}>{tab}</h1>
         {tabUpperContent()}
-        <Devider />
-
-        <div className={style.attributes}>
-          <Attributes tab={tab} />
+        <div style={{ paddingBlock: "2vh" }}>
+          <Devider />
         </div>
+
+        <Attributes tab={tab} />
       </Tab>
       <div className={`${style.tabsRow} strokedWhiteText`}>
         <div
