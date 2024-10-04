@@ -12,6 +12,9 @@
   overflow-y: auto;
   z-index: 2;
   height: -webkit-fill-available;
+  text-align: justify;
+  display: block;
+  padding-right: 15px;
 }
 
 .frame {
@@ -32,4 +35,10 @@
   background-color: var(--scrollbar-thumb-text);
   border-radius: 5px;
   width: 10%;
+}
+
+.text {
+  display: inline-block;
+  padding-right: 15px;
+  text-align: justify;
 }
