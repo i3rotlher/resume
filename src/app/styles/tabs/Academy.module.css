@@ -65,6 +65,10 @@
   width: 10%;
 }
 
+.custom-scrollbar::-webkit-scrollbar-corner {
+  display: none;
+}
+
 .buttons {
   position: absolute;
   display: flex;

@@ -12,3 +12,18 @@
   flex: 1 1 auto;
   overflow: auto;
 }
+.backgroundImage::-webkit-scrollbar {
+  width: 1.25vw;
+}
+
+.backgroundImage::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 20px 20px var(--scrollbar-track-text);
+  border-radius: 59999px;
+  border: solid 0.25vw transparent;
+}
+
+.backgroundImage::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 10px 10px var(--dark-green-background);
+  border-radius: 599999px;
+  border: solid 0.25vw transparent;
+}
