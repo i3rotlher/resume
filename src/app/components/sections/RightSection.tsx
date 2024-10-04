@@ -34,23 +34,29 @@ const RightSection = () => {
   return (
     <Section>
       <nav>
-        <Image
-          onClick={prevTab}
-          src="/navigationArrow.svg"
-          alt={prev.name}
+        <div
           className={`${style.navigationArrow} ${style.leftCenter}`}
-          width={45}
-          height={45}
-        ></Image>
-        <br />
-        <Image
-          onClick={nextTab}
-          src="/navigationArrow.svg"
-          alt={next.name}
+          style={{ height: "3vw" }}
+        >
+          <Image
+            onClick={prevTab}
+            src="/navigationArrow.svg"
+            alt={prev.name}
+            fill
+          ></Image>
+        </div>
+        <div
           className={`${style.navigationArrow} ${style.rightCenter}`}
-          width={45}
-          height={45}
-        ></Image>
+          style={{ height: "3vw" }}
+        >
+          <Image
+            onClick={nextTab}
+            src="/navigationArrow.svg"
+            alt={next.name}
+            fill
+          ></Image>
+        </div>
+
         <br />
       </nav>
       <div className={style.layout}>
