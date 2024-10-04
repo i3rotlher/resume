@@ -18,3 +18,18 @@
   position: absolute;
   z-index: 1;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: block;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-text);
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-text);
+  border-radius: 5px;
+  width: 10%;
+}

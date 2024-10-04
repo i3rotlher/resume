@@ -73,6 +73,7 @@
   background-color: #c3ae72;
   padding: 15px;
   overflow: hidden;
+  min-height: 10vh;
 }
 
 .custom-scrollbar::-webkit-scrollbar {

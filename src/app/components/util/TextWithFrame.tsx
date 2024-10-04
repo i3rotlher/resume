@@ -9,7 +9,9 @@ type TextProps = {
 export const TextWithFrame: React.FC<TextProps> = ({ children }) => {
   return (
     <div className={`${style.textContainer} strokedWhiteText`}>
-      <div className={style.paddedText}> {children}</div>
+      <div className={`${style.paddedText} ${style["custom-scrollbar"]}`}>
+        {children}
+      </div>
       <Image src="/frame_horizontal.png" alt="" fill className={style.frame} />
     </div>
   );
