@@ -11,7 +11,6 @@
   margin: 5%;
   overflow-y: auto;
   z-index: 2;
-  height: -webkit-fill-available;
   text-align: justify;
   display: block;
   padding-right: 15px;

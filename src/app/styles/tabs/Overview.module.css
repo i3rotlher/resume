@@ -31,6 +31,8 @@
 
 .skillProgressbar {
   flex: 9;
+  border: 6px solid var(--light-brown-accent);
+  border-radius: 5px;
 }
 
 .text {

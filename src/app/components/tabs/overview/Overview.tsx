@@ -26,7 +26,7 @@ const Overview = () => {
           <ProgressBar
             percent={70 / 100}
             label="Frontend 70/100"
-            color="#7B99E7"
+            color="var(--bright-background)"
           />
         </div>
       </div>
@@ -38,7 +38,7 @@ const Overview = () => {
           <ProgressBar
             percent={90 / 100}
             label="Backend 90/100"
-            color="#CD5B58"
+            color="var(--bright-background)"
           />
         </div>
       </div>
