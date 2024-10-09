@@ -7,7 +7,7 @@
 
 .content {
   scrollbar-width: none;
-  overflow: scroll;
+  overflow: auto;
   height: inherit;
   scroll-behavior: smooth;
   padding-inline: 15px;

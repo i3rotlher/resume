@@ -1,21 +1,29 @@
 import Image from "next/image";
 import style from "../../../styles/tabs/Overview.module.css";
 import ProgressBar from "../../util/ProgressBar";
-import { TextWithFrame } from "../../util/TextWithFrame";
 
 const Overview = () => {
   return (
     <div className={style.content}>
-      <div className={style.description}>
-        <TextWithFrame>
-          <span className={style.text}>
-            Max, the Fullstack Developer, is a true master of digital realms.
-            With his ability to seamlessly blend frontend and backend
-            technologies, he is akin to a powerful mage proficient in both
-            arcane arts and swordsmanship. His tools are not sword and shield,
-            but keyboard and mouse, and his battlefield is the code.
-          </span>
-        </TextWithFrame>
+      <div className={style.textScrollWrapper}>
+        <div
+          className={`${style.generalText} ${style["custom-scrollbar"]} strokedWhiteText`}
+        >
+          <span
+            className={style.text}
+          >{`I'm a keen observer who never misses a detail, which helps me make
+            smart decisions quickly. I'm great at keeping everyone in the loop
+            with clear and friendly communication. Juggling multiple tasks at
+            once is my specialty, and I pick up new skills fast. I thrive in
+            team settings and love working with others to get things done. You
+            can always count on me to be dependable and get the job done right.`}</span>
+        </div>
+        <Image
+          src="/frame_horizontal.png"
+          alt=""
+          fill
+          className={style.frame}
+        />
       </div>
       <h2>Abillities:</h2>
       <div className={style.skillsRow}>
