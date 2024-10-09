@@ -6,12 +6,15 @@
 }
 
 .content {
-  scrollbar-width: none;
-  overflow: auto;
+  overflow: hidden;
   height: inherit;
   scroll-behavior: smooth;
   padding-inline: 15px;
   padding-bottom: 5px;
+}
+
+.content::-webkit-scrollbar {
+  -webkit-appearance: none;
 }
 
 .navigationArrow {

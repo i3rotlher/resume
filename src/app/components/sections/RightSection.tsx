@@ -5,7 +5,7 @@ import { useState } from "react";
 import Section from "./Section";
 import style from "./../../styles/sections/RightSection.module.css";
 import Overview from "../tabs/overview/Overview";
-import QuestLog from "../tabs/questlog/Questlog";
+import QuestLog from "../tabs/questlog/a";
 import Skills from "../tabs/skills/Skills";
 import Academy from "./../tabs/academy/Academy";
 
