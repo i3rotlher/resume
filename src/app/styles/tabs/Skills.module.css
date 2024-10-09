@@ -92,6 +92,12 @@
   width: 10%;
 }
 
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: var(--scrollbar-thumb-text) var(--scrollbar-track-text); /* Set thumb and track color */
+}
+
 .text {
   display: inline-block;
   padding-right: 15px;

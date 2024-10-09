@@ -69,6 +69,12 @@
   display: none;
 }
 
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: var(--scrollbar-thumb-text) var(--scrollbar-track-text); /* Set thumb and track color */
+}
+
 .buttons {
   position: absolute;
   display: flex;
