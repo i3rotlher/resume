@@ -1,14 +1,22 @@
-.container {
-  height: 100%;
+.questlogContainer {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  justify-content: space-evenly;
+  gap: 2vh;
+  justify-content: space-between;
+  min-height: 100%;
+  padding-top: 1vh;
+  box-sizing: border-box;
 }
 
 .hideScrollBar {
   position: relative;
   overflow-y: scroll;
-  scrollbar-width: 10px;
-  left: 10px;
+  padding-inline: 20px;
+  padding-bottom: 10px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
 }
