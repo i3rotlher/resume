@@ -28,8 +28,10 @@
   border: solid 0.25vw transparent;
 }
 
-/* For Firefox */
-.backgroundImage {
-  scrollbar-width: thin; /* Make the scrollbar thin */
-  scrollbar-color: var(--dark-green-background) var(--scrollbar-track-text); /* Thumb and track color */
+@-moz-document url-prefix() {
+  /* For Firefox */
+  .backgroundImage {
+    scrollbar-width: thin; /* Make the scrollbar thin */
+    scrollbar-color: var(--scrollbar-track-text) transparent; /* Thumb and track color */
+  }
 }

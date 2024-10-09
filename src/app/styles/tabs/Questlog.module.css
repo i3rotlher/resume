@@ -20,3 +20,8 @@
 .hideScrollBar::-webkit-scrollbar {
   display: none;
 }
+
+.hideScrollBar {
+  overflow-y: scroll;
+  scrollbar-color: transparent transparent; /* Colors */
+}

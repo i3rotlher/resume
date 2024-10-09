@@ -32,3 +32,9 @@
   border-radius: 5px;
   width: 10%;
 }
+
+/* For Firefox */
+.backgroundImage {
+  scrollbar-width: thin; /* Make the scrollbar thin */
+  scrollbar-color: transparent var(--scrollbar-track-text); /* Thumb and track color */
+}
