@@ -18,7 +18,7 @@
   position: absolute;
   display: none;
   z-index: 99;
-  background: #c3ae72;
+  background: var(--background);
   border: 5px solid #bc894d;
   border-radius: 10px;
   text-wrap: nowrap;

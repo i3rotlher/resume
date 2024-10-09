@@ -174,7 +174,6 @@ const Academy = () => {
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >
-          <rect width="1250" height="3754" fill="#C3AE72" />
           <rect x="610" y="3107" width="30" height="589" fill="#865C2B" />
           <rect x="620" y="3107" width="10" height="589" fill="#BC894D" />
           <g opacity="0.5">

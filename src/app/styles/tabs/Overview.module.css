@@ -31,8 +31,57 @@
 
 .skillProgressbar {
   flex: 9;
+  border: 0.5vh solid var(--light-brown-accent);
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: block;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-text);
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-text);
+  border-radius: 5px;
+  width: 10%;
+}
+
+@-moz-document url-prefix() {
+  /* For Firefox */
+  .custom-scrollbar {
+    scrollbar-width: thin; /* Make the scrollbar thin */
+    scrollbar-color: var(--scrollbar-thumb-text) var(--scrollbar-track-text); /* Set thumb and track color */
+  }
 }
 
 .text {
+  display: inline-block;
+  padding-right: 15px;
   text-align: justify;
+}
+
+.generalText {
+  overflow-y: auto;
+  display: block;
+  text-align: justify;
+  height: 100%;
+  min-height: 1em;
+  z-index: 2;
+  position: relative;
+}
+
+.textScrollWrapper {
+  position: relative;
+  padding: 4vh;
+  overflow: hidden;
+  min-height: 10vh;
+  max-height: 45%;
+}
+
+.frame {
+  z-index: 1;
 }

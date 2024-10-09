@@ -47,7 +47,7 @@ const Skills = () => {
       <Tab tab={tab}>
         <h1 style={{ color: "var(--light-brown-accent)" }}>{tab}</h1>
         {tabUpperContent()}
-        <div style={{ paddingBlock: "2vh" }}>
+        <div style={{ paddingBlock: "0.85vh" }}>
           <Devider />
         </div>
 

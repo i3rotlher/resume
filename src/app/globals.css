@@ -2,7 +2,7 @@
   --light-brown-accent: #bc894d;
   --dark-brown-accent: #865c2b;
 
-  --background: #c3ae72;
+  --background: #c4ab62;
   --dark-green-background: #6f6b53;
   --grey-background: #c6bea6;
   --bright-background: #e3dac1;
@@ -53,7 +53,7 @@ body {
 
 h1 {
   font-style: normal;
-  font-size: calc(min(4vh, 4vw));
+  font-size: calc(min(5vh, 5vw));
   font-weight: 300;
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@ h1 {
 
 h2 {
   font-style: normal;
-  font-size: calc(min(5vh, 5vw));
+  font-size: calc(min(4vh, 4vw));
   font-weight: 300;
   display: flex;
   align-items: center;
@@ -122,4 +122,8 @@ span {
     margin-top: 0.5rem;
     line-height: 1.5;
   }
+}
+
+*::-webkit-scrollbar-corner {
+  display: none;
 }

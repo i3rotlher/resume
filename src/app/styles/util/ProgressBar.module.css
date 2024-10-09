@@ -5,6 +5,10 @@
   position: absolute;
   left: 0;
   height: 100%;
+  width: 70%;
+  background: #e3dac1;
+  border-block: none;
+  border-left: none;
 }
 
 .progressbarBackground {
