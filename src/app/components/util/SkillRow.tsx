@@ -28,8 +28,7 @@ export const SkillRow: React.FC<SkillRowProps> = ({
             "",
             `Level ${level} out of 10.`,
             "0 = Never used this skill",
-            "10 = Used this skill a lot",
-            "and is capable of doing anything with it.",
+            "10 = Has mastered this skill in every way.",
           ]}
         >
           <h3 className={`${style.level} ${style.field}`}>{level} </h3>

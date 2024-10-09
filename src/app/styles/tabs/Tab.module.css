@@ -27,3 +27,11 @@
   border-radius: 599999px;
   border: solid 0.25vw transparent;
 }
+
+@-moz-document url-prefix() {
+  /* For Firefox */
+  .backgroundImage {
+    scrollbar-width: thin; /* Make the scrollbar thin */
+    scrollbar-color: var(--scrollbar-track-text) transparent; /* Thumb and track color */
+  }
+}

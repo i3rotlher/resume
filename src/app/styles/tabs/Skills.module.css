@@ -70,7 +70,7 @@
 .textScrollWrapper {
   border-radius: 10px;
   border: 3px solid var(--light-brown-accent);
-  background-color: #c3ae72;
+  background-color: var(--background);
   padding: 15px;
   overflow: hidden;
   margin-bottom: 1vh;
@@ -90,6 +90,14 @@
   background-color: var(--scrollbar-thumb-text);
   border-radius: 5px;
   width: 10%;
+}
+
+@-moz-document url-prefix() {
+  /* For Firefox */
+  .custom-scrollbar {
+    scrollbar-width: thin; /* Make the scrollbar thin */
+    scrollbar-color: var(--scrollbar-thumb-text) var(--scrollbar-track-text); /* Set thumb and track color */
+  }
 }
 
 .text {
