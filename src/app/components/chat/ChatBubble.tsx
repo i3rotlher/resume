@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const predefinedMessages: string[] = [
   "Hallo! Wie kann ich Ihnen helfen?",
@@ -16,6 +16,8 @@ const ChatBubble: React.FC = () => {
   const [missedMessagesCount, setMissedMessagesCount] = useState<number>(0);
   const [lastViewedMessageIndex, setLastViewedMessageIndex] = useState(-1);
 
+  const chatContainerRef = useRef<HTMLDivElement | null>(null);
+
   // Nachrichten hinzufügen, unabhängig davon, ob der Chat geöffnet ist oder nicht
   useEffect(() => {
     const timer = setInterval(() => {
@@ -23,38 +25,54 @@ const ChatBubble: React.FC = () => {
         const newMessage = predefinedMessages[currentMessageIndex];
         setMessages((prev) => [...prev, newMessage]);
 
-        // Erhöhe den Zähler für ungelesene Nachrichten, wenn der Chat geschlossen ist
         if (!isChatOpen) {
           setMissedMessagesCount((prev) => prev + 1);
         }
         setCurrentMessageIndex((prev) => prev + 1);
       } else {
-        clearInterval(timer); // Stoppe den Timer, wenn alle Nachrichten angezeigt wurden
+        clearInterval(timer);
       }
-    }, 3000); // Nachrichten erscheinen alle 3 Sekunden
+    }, 3000);
 
     return () => {
-      clearInterval(timer); // Timer aufräumen
+      clearInterval(timer);
     };
   }, [currentMessageIndex, isChatOpen]);
+
+  // Close chat if click is outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        chatContainerRef.current &&
+        !chatContainerRef.current.contains(event.target as Node)
+      ) {
+        setIsChatOpen(false); // Close chat when clicked outside
+      }
+    };
+
+    if (isChatOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isChatOpen]);
 
   const toggleChat = () => {
     setIsChatOpen((prev) => !prev);
     if (!isChatOpen) {
-      setMissedMessagesCount(0); // Zähler zurücksetzen, wenn der Chat geöffnet wird
-    } else {
+      setMissedMessagesCount(0);
       setLastViewedMessageIndex(currentMessageIndex - 1);
     }
   };
 
-  console.log(lastViewedMessageIndex);
-  console.log(currentMessageIndex);
-  console.log(missedMessagesCount);
-
   return (
     <div style={{ zIndex: 100, position: "relative" }}>
       <div
-        onClick={toggleChat}
+        onMouseDown={toggleChat}
         style={{
           position: "fixed",
           bottom: "20px",
@@ -95,6 +113,7 @@ const ChatBubble: React.FC = () => {
 
       {isChatOpen && (
         <div
+          ref={chatContainerRef}
           style={{
             position: "fixed",
             bottom: "80px",
