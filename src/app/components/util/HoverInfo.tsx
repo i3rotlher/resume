@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode, useRef, useState } from "react";
+import React, { ReactNode, useState } from "react";
 
 import style from "./../../../app/styles/util/HoverInfo.module.css";
 import { HoverBox } from "./HoverBox";

@@ -24,11 +24,12 @@ export const SkillRow: React.FC<SkillRowProps> = ({
       <div className={style.levelContainer}>
         <HoverInfo
           hoverText={[
-            "Skill Level",
+            "Skill Level:",
             "",
             `Level ${level} out of 10.`,
-            "0 = Never used this skill",
-            "10 = Has mastered this skill in every way.",
+            "",
+            "[small]0 = Never used this skill",
+            "[small]10 = Mastered this skill in every way",
           ]}
         >
           <h3 className={`${style.level} ${style.field}`}>{level} </h3>
