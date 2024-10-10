@@ -63,11 +63,15 @@ const ChatBubble: React.FC = () => {
 
   const toggleChat = () => {
     setIsChatOpen((prev) => !prev);
-    if (!isChatOpen) {
+    if (isChatOpen) {
       setMissedMessagesCount(0);
       setLastViewedMessageIndex(currentMessageIndex - 1);
     }
   };
+
+  console.log("missed: " + missedMessagesCount);
+  console.log("curr: " + currentMessageIndex);
+  console.log("last: " + lastViewedMessageIndex);
 
   return (
     <div style={{ zIndex: 100, position: "relative" }}>
