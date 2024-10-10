@@ -41,7 +41,7 @@ export const Devider = () => {
               height="38"
               patternUnits="userSpaceOnUse"
             >
-              <path d="M0 19H737" stroke="#BC894D" stroke-width="2"></path>
+              <path d="M0 19H737" stroke="#BC894D" strokeWidth="2"></path>
             </pattern>
           </defs>
           <rect

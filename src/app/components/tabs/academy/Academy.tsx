@@ -264,7 +264,7 @@ const Academy = () => {
             height="170"
             rx="85"
             stroke="#BC894D"
-            stroke-width="5"
+            strokeWidth="5"
           />
           <rect
             x="475"
@@ -289,7 +289,7 @@ const Academy = () => {
               height="170"
               rx="85"
               stroke="#BC894D"
-              stroke-width="5"
+              strokeWidth="5"
             />
             <rect
               x="736"
@@ -314,7 +314,7 @@ const Academy = () => {
             height="170"
             rx="85"
             stroke="#BC894D"
-            stroke-width="5"
+            strokeWidth="5"
           />
           <mask
             id="mask0_1233_3588"
@@ -351,7 +351,7 @@ const Academy = () => {
             height="170"
             rx="85"
             stroke="#BC894D"
-            stroke-width="5"
+            strokeWidth="5"
           />
           <rect
             x="211.2"
@@ -375,7 +375,7 @@ const Academy = () => {
             height="170"
             rx="85"
             stroke="#BC894D"
-            stroke-width="5"
+            strokeWidth="5"
           />
           <rect
             x="752.168"
@@ -399,7 +399,7 @@ const Academy = () => {
             height="170"
             rx="85"
             stroke="#BC894D"
-            stroke-width="5"
+            strokeWidth="5"
           />
           <rect
             x="378.259"
@@ -423,7 +423,7 @@ const Academy = () => {
             height="170"
             rx="85"
             stroke="#BC894D"
-            stroke-width="5"
+            strokeWidth="5"
           />
           <rect
             x="336"

@@ -5,9 +5,9 @@ import { AttributeData } from "../tabs/skills/AttributesData";
 
 type AttributesRow = { attributes: AttributeData[] };
 
-function renderAttribute(attribute: AttributeData): ReactNode {
+function renderAttribute(attribute: AttributeData, index: number): ReactNode {
   return (
-    <div className={styles.attribute}>
+    <div className={styles.attribute} key={index}>
       <div className={styles.logoContainer}>
         <Image
           src={attribute.icon}
@@ -24,7 +24,7 @@ function renderAttribute(attribute: AttributeData): ReactNode {
 export const AttributesRow: React.FC<AttributesRow> = ({ attributes }) => {
   return (
     <div className={styles.row}>
-      {attributes.map((attr) => renderAttribute(attr))}
+      {attributes.map((attr, index) => renderAttribute(attr, index))}
     </div>
   );
 };

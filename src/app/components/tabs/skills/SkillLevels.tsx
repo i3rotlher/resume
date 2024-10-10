@@ -12,7 +12,7 @@ const SkillLevels: React.FC<SkillsProps> = ({ frontend }) => {
     <div className={style.skillLevelsContainer}>
       {(frontend &&
         skills["frontend"].map(
-          (skill) =>
+          (skill, idx) =>
             (skill.name !== "Figma" && (
               <SkillRow
                 name={skill.name}
@@ -22,7 +22,7 @@ const SkillLevels: React.FC<SkillsProps> = ({ frontend }) => {
                 key={skill.name}
               />
             )) || (
-              <>
+              <div key={idx}>
                 <div style={{ height: "5vh" }}>
                   <Devider />
                 </div>
@@ -34,7 +34,7 @@ const SkillLevels: React.FC<SkillsProps> = ({ frontend }) => {
                   progress={skill.progress}
                   key={skill.name}
                 />
-              </>
+              </div>
             )
         )) ||
         skills["backend"].map((skill) => (
