@@ -36,6 +36,8 @@
   background-image: url("../../public/background.svg");
   background-size: cover;
   background-position: center;
+  background-color: color(srgb 0.4356 0.4109 0.3854);
+  background-repeat: repeat;
 }
 
 .mainLayout {
