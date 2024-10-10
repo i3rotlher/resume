@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const predefinedMessages: string[] = [
   "Hallo! Wie kann ich Ihnen helfen?",
@@ -38,6 +38,16 @@ const ChatBubble: React.FC = () => {
     };
   }, [nextMessageIndex, isChatOpen]);
 
+  const closeChat = useCallback(() => {
+    setLastViewedMessageIndex(nextMessageIndex - 1);
+    setMissedMessagesCount(0);
+    setIsChatOpen(false);
+  }, [nextMessageIndex]);
+
+  const openChat = () => {
+    setIsChatOpen(true);
+  };
+
   // Close chat if click is outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -58,17 +68,7 @@ const ChatBubble: React.FC = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isChatOpen]);
-
-  const closeChat = () => {
-    setLastViewedMessageIndex(nextMessageIndex);
-    setMissedMessagesCount(0);
-    setIsChatOpen(false);
-  };
-
-  const openChat = () => {
-    setIsChatOpen(true);
-  };
+  }, [closeChat, isChatOpen]);
 
   return (
     <div style={{ zIndex: 100, position: "relative" }}>
