@@ -67,6 +67,7 @@
   width: 85%;
   height: 80%;
   border-radius: 10px;
+  z-index: 4;
 }
 
 .buttonStyle {
