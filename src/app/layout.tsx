@@ -4,6 +4,7 @@ import { VT323 } from "next/font/google";
 import LeftSection from "./components/sections/LeftSection";
 import RightSection from "./components/sections/RightSection";
 import Section from "./components/sections/Section";
+import ChatBubble from "./components/chat/ChatBubble";
 
 export const metadata: Metadata = {
   title: "Max's Resume",
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`stoneBackground ${vt323.className}`}>
+        <ChatBubble />
         <main className={"mainLayout"}>
           <LeftSection />
           <RightSection />
