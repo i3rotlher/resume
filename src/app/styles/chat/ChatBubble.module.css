@@ -1,0 +1,39 @@
+.chatBubbleContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.chatBubbleButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: none;
+}
+
+.chat {
+  position: fixed;
+  bottom: 90px; /* Place the chat above the bubble */
+  right: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow-y: auto;
+  border: solid 3px var(--dark-brown-accent);
+  border-radius: 10px;
+  max-height: 85vh;
+  background-color: var(--grey-background);
+}
+
+.chat.show {
+  display: block;
+  z-index: 1100;
+}

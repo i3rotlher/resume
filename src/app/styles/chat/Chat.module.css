@@ -1,0 +1,26 @@
+.newMessages {
+  font-weight: bold;
+}
+
+.chatMessage {
+  padding: 10px;
+  border: 0.2vh solid var(--light-brown-accent);
+  background-color: var(--bright-background);
+  border-radius: 999px;
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 5px;
+}
+
+.chatMessageContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chatMessageTime {
+}
