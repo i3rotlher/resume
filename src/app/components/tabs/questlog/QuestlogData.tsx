@@ -4,8 +4,28 @@ export type QuestLogData = QuestCardProps[];
 
 export const Quests: QuestLogData = [
   {
-    from: "Mai 2024",
+    from: "Januar 2025",
     to: "Present",
+    name: "Junior Frontend Developer",
+    company: "casavi",
+    city: "München",
+    country: "Germany",
+    icon: "ownWork.png",
+    active: true,
+    keyResponsibilities: [
+      "Fullstack Developer with focus on Frontend",
+      "React with Tenstack in Frontend, NestJS in the Backend",
+      "Doing everything all over the place from refactoring redux to tenstack in the FE to doing db migrations and neww routes in the Backend",
+    ],
+    skills:
+      "TypeScript, React, HTML, JavaScript, CSS, Web-Application, Gitlab, Node, NestJS, Docker, Bull Queue, SQL".split(
+        ", "
+      ),
+    sidenote: "",
+  },
+  {
+    from: "Mai 2024",
+    to: "Januar 2025",
     name: "Hands on Projects",
     company: "By Myself",
     city: "Seoul (South Korea)",
