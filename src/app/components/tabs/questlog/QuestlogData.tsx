@@ -10,7 +10,7 @@ export const Quests: QuestLogData = [
     company: "casavi",
     city: "München",
     country: "Germany",
-    icon: "ownWork.png",
+    icon: "casavi.png",
     active: true,
     keyResponsibilities: [
       "Fullstack Developer with focus on Frontend",
